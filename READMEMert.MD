@@ -24,7 +24,8 @@ Aşağıdaki adımlar, bir sayfanın farklı bölümlerini grup olarak tasarlay�
    git commit -m "Tasarım dosyalarımı ekledim"
    Açıklama mesajı yaptığınız işi belirtmelidir.
 7. Branch’in GitHub’a Gönderilmesi (Push)
-   git push origin benim-branchim
+   git push --set-upstream origin Hasan_K -- ilk push için
+   git push --daha sonra yapılacak pushlar için yeterli
    Bu komut çalışınca GitHub’da otomatik olarak yeni branch oluşur.
 8. Pull Request (PR) Açılması
    GitHub’da:
@@ -35,15 +36,17 @@ Aşağıdaki adımlar, bir sayfanın farklı bölümlerini grup olarak tasarlay�
     Ekip arkadaşları inceleyip onaylar.
 13. PR Onaylandıktan Sonra Merge Edilir
     Kod ana (main) branch’e eklenmiş olur.
+
 14. Tüm Ekip En Güncel Kodu Çeker
-    Ana branch güncellendikten sonra:
+    PR onaylandıktan sonra
     git checkout main
     git pull origin main
-    Herkes en güncel proje sürümüne sahip olur.
-    İstersen Ben Sana Terminal Komutlarıyla Bir Örnek Çalışma Akışı Tek Parça Olarak da Yazayım mı?
-    Mesela:
-    git checkout -b hero-section
-    cp ../benimklasorum/index.html ./src/
-    git add .
-    git commit -m "Hero section tasarımı"
-    git push origin hero-section
+
+    bu kodlar ile main local bilgisayarınızın main branchi güncel tutulur
+
+    daha sonra kendi branchinize
+
+    git checkout Kendi_branchiniz
+    git pull origin main
+
+    yapılarak kendi branchiniz de güncel ile eşitlenmiş olur
