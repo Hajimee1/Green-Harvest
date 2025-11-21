@@ -6,3 +6,5 @@
 3. Kod bittikten sonra Pull Request açılır
 4. En az 1 onay olmadan merge yapılmaz
 5. Merge sonrası herkes git pull ile güncel main’i çeker
+
+-deneme1
