@@ -1,0 +1,122 @@
+/* Genel Ayarlar ve Arka Plan */
+body {
+  background-color: rgba(122, 49, 69, 1);
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.container {
+  width: 1280px; /* Figma container genişliği */
+  margin: 0 auto;
+  padding: 100px; /* üst-alt ve sol-sağ 100px */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 52px; /* Header ile grid arası gap */
+}
+
+/* Başlık Bölümü (Header) */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Figma'dan gelen gap */
+  max-width: 626px; /* Figma width */
+  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler */
+  opacity: 1;
+}
+
+.baslik {
+  color: rgba(212, 191, 196, 1);
+}
+
+.header h2 {
+  color: rgba(251, 251, 251, 1);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.header p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  color: rgba(251, 251, 251, 1);
+}
+
+/* Ürün Kartları Bölümü (CSS Grid Kullanımı) */
+.products-grid {
+  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px */
+  display: grid;
+  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği */
+  gap: 24px;
+  margin: 0 auto; /* container içinde ortalanması için */
+  opacity: 1;
+}
+
+.product-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgba(122, 49, 69, 1); /* Başlık rengi */
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(20, 20, 20, 1);
+  margin-bottom: 20px;
+}
+
+/* Ürün Kartı Stili */
+.product-card {
+  width: 344px; /* Figma width */
+  height: 380px; /* Figma height */
+  padding: 32px; /* Figma padding */
+  gap: 10px; /* Figma gap */
+  border-radius: 40px; /* Figma radius */
+  background: rgba(251, 251, 251, 1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Yeni Görsel Stili */
+.product-image {
+  max-width: 280px;
+  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik */
+  max-height: 244px;
+
+  /* Konumlandırma */
+  position: absolute;
+  bottom: 0;
+
+  /* Yatay Ortalama için */
+  left: 50%; /* Görselin başlangıç noktasını ortala */
+
+  /* Dönüşüm (Transform) ile kaydırma: */
+  /* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama */
+  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla */
+  transform: translateX(-50%) translateY(-10px);
+
+  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla */
+  object-fit: contain;
+}
+
+/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için */
+.product-card h3,
+.product-card .price {
+  position: relative;
+  z-index: 10;
+}
