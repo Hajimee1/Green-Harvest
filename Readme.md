@@ -8,7 +8,7 @@
 5. Merge sonrası herkes git pull ile güncel main’i çeker
 
 GitHub Ortak Çalışma Rehberi (Branch + Pull Request Yöntemi)
-Aşağıdaki adımlar, bir sayfanın farklı bölümlerini grup olarak tasarlayıp ortak GitHub reposuna yüklemek için kullanılacaktır.
+Aşağıdaki adımlar, bir. sayfanın farklı bölümlerini grup olarak tasarlayıp ortak GitHub reposuna yüklemek için kullanılacaktır.
 
 1. Reponun Bilgisayara İndirilmesi (Clone)
    Terminal açılır ve proje klasörünün bulunacağı dizine gidilir:
