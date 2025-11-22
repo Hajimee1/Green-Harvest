@@ -59,3 +59,5 @@ Aşağıdaki adımlar, bir sayfanın farklı bölümlerini grup olarak tasarlay�
     git pull origin main
 
     yapılarak kendi branchiniz de güncel ile eşitlenmiş olur
+
+deneme-ayse
