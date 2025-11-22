@@ -60,4 +60,10 @@ Aşağıdaki adımlar, bir. sayfanın farklı bölümlerini grup olarak tasarlay
 
     yapılarak kendi branchiniz de güncel ile eşitlenmiş olur
 
-deneme-ayse
+15. Her push işleminden sonra pull request oluşturulması zorunludur
+16. Her pull işleminden önce pull request kontrol edilmelidir aksi halde conflictler oluşmaktadır.
+17. Github da şuan dosya karmaşası olmaması için herkes yaptığı her değişikliği yorum satırları halinde bir blok içine almalıdır.
+18. Sınıf adlarına öncelik vererek css düzenlemeleri tekrar yapılmalıdır.Kodlar birleşeceği için element isimlerine stil verilmememelidir
+19. Stil verilen elementler için stil belirtecinin başına bir sınıf veya ait olduğu sectionın belirteci konulmalıdır (örn: .hero p, footor p)
+20. Vector ve jpg formatlı dosyalar tek el olarak ekip lideri tarafından tekrar indirilip özel olarak klasörlenecektir bu işlemden sonra html düzenlemeleri ekip üyeleri tarafından yapılmalıdır
+21. Oluşan düzeni bozacak veya fazladan dosya ekleyecek herhangi bir push işleminden kaçınılmalı böyle bir durum olduğunda ekip üyelerinden yardım istenmesi zorunludur.
