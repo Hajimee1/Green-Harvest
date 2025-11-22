@@ -1,0 +1,174 @@
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #141414;
+  --white: #fbfbfb;
+  --chianti: #7a3145;
+  --blush: #d4bfc4;
+  --green: #576f35;
+  --grey: #858585;
+  --transparent: rgba(20, 20, 20, 0.2);
+  --greenlight: #3cbc81;
+  --smthwrong: #e74a3b;
+}
+
+:root {
+  --font-family: "Inter Tight", sans-serif;
+  --second-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding: 100px 0px 0px;
+  width: 100%;
+  min-height: 760px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 20px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-section p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works {
+  width: 100%;
+  height: auto;
+}
+
+.how_it_works_image {
+  width: 100%;
+  background-color: var(--chianti);
+  padding: 40px 20px;
+}
+
+.how_it_works_image img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works_text {
+  width: 100%;
+  height: auto;
+  background-color: var(--green);
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.how_it_works_text h2 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.how_it_works .vegetable,
+.easy-steps {
+  color: var(--blush);
+}
+
+.how_it_works_text p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.steps {
+  max-width: 335px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px 0 0;
+}
+
+.step-list {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.circle {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.step-item {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  background-color: var(--white);
+  margin-bottom: 20px;
+  align-items: flex-start;
+  padding: 16px 20px;
+}
+
+.step-item p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--grey);
+  margin: 0;
+  padding-top: 4px;
+}
+
+.the-vegetable,
+.next-to-it,
+.the-basket,
+.fresh-vegetables {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
