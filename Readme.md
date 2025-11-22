@@ -8,3 +8,5 @@
 5. Merge sonrası herkes git pull ile güncel main’i çeker
 
 -deneme1
+
+-deneme2
