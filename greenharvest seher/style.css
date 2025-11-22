@@ -1,0 +1,73 @@
+/* advertisement Desktop */
+/* class */
+.discount {
+text-align: left;
+font-size: 64px;
+padding: 100px;
+text-transform: uppercase;
+}
+/* Discount up to 40%! */
+.discount-highlight {
+background: #576f35;
+color: #fbfbfb;
+padding: 0 6px;
+
+
+
+/* footer Desktop */ 
+/* class */ 
+.foot-main {
+display: flex;
+padding: 52px 100px 124px;
+}
+/* logo */ 
+.foot-logo {
+width: 265px;
+margin-right: 250px;
+color: #fbfbfb;
+}
+/* logo altı yazı */ 
+.foot-logo p {
+margin-top: 24px;
+font-weight: 500;
+}
+/* how it works, vegetables,rewiew */ 
+.foot-links {
+display: flex;
+flex-direction: column;
+gap: 24px;
+margin-right: 121px;
+}
+/* how it works, vegetables,rewiew yazı*/ 
+.foot-links a {
+color: #fbfbfb;
+font-size: 28px;
+text-transform: uppercase;
+font-weight: 600;
+}
+/* telefon ve adres */ 
+.foot-contact {
+color: #fbfbfb;
+font-style: normal;
+font-weight: 700;
+width: 216px;
+}
+/* privacy policy, cookie setting, green harvest */ 
+.foot-end {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 100px 52px;
+color: #d4bfc4;
+}
+/* privacy policy, cookie setting */ 
+/* sıralı alt alta */ 
+.foot-end ul {
+display: flex;
+gap: 12px;
+}
+/* green harvest */
+.foot-end p {
+color: #d4bfc4;
+font-weight: 500;
+}

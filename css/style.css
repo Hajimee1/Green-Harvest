@@ -1,0 +1,455 @@
+/* Genel Ayarlar ve Arka Plan */
+body {
+  background-color: rgba(122, 49, 69, 1);
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.container {
+  width: 1280px;
+  /* Figma container genişliği */
+  margin: 0 auto;
+  padding: 100px;
+  /* üst-alt ve sol-sağ 100px */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  /* Header ile grid arası gap */
+}
+
+/* Başlık Bölümü (Header) */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  /* Figma'dan gelen gap */
+  max-width: 626px;
+  /* Figma width */
+  height: auto;
+  /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler */
+  opacity: 1;
+}
+
+.baslik {
+  color: rgba(212, 191, 196, 1);
+}
+
+.header h2 {
+  color: rgba(251, 251, 251, 1);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.header p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  color: rgba(251, 251, 251, 1);
+}
+
+/* Ürün Kartları Bölümü (CSS Grid Kullanımı) */
+.products-grid {
+  width: 1080px;
+  /* 3 kart × 344px + 2 gap 24px = 1080px */
+  display: grid;
+  grid-template-columns: repeat(3, 344px);
+  /* birebir kart genişliği */
+  gap: 24px;
+  margin: 0 auto;
+  /* container içinde ortalanması için */
+  opacity: 1;
+}
+
+.product-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgba(122, 49, 69, 1);
+  /* Başlık rengi */
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(20, 20, 20, 1);
+  margin-bottom: 20px;
+}
+
+/* Ürün Kartı Stili */
+.product-card {
+  width: 344px;
+  /* Figma width */
+  height: 380px;
+  /* Figma height */
+  padding: 32px;
+  /* Figma padding */
+  gap: 10px;
+  /* Figma gap */
+  border-radius: 40px;
+  /* Figma radius */
+  background: rgba(251, 251, 251, 1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+/* Yeni Görsel Stili */
+.product-image {
+  max-width: 280px;
+  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik */
+  max-height: 244px;
+
+  /* Konumlandırma */
+  position: absolute;
+  bottom: 0;
+
+  /* Yatay Ortalama için */
+  left: 50%;
+  /* Görselin başlangıç noktasını ortala */
+
+  /* Dönüşüm (Transform) ile kaydırma: */
+  /* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama */
+  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla */
+  transform: translateX(-50%) translateY(-10px);
+
+  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla */
+  object-fit: contain;
+}
+
+/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için */
+.product-card h3,
+.product-card .price {
+  position: relative;
+  z-index: 10;
+}
+
+/* !--Cem - Navbar --> */
+
+/* Desktop Header - 1280x52 */
+.navbar-header {
+  background: #5a7749;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', Arial, sans-serif;
+  z-index: 10;
+}
+
+.navbar-logo-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.navbar-logo-icon span {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Desktop Menu Button States */
+.navbar-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: transparent;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Desktop Hover State */
+.navbar-nav a:hover {
+  background: rgba(201, 163, 163, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Desktop Active State */
+.navbar-nav a:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Desktop Shop Button States */
+.navbar-nav a.navbar-shop-btn {
+  background: #8b1c42;
+  border-color: #8b1c42;
+}
+
+.navbar-nav a.navbar-shop-btn:hover {
+  background: #c9a3a3;
+  border-color: #c9a3a3;
+  color: #8b1c42;
+}
+
+.navbar-nav a.navbar-shop-btn:active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #8b1c42;
+}
+
+/* Checkbox hack for menu toggle */
+.navbar-menu-checkbox {
+  display: none;
+}
+
+.navbar-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+.navbar-menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+/* Mobile Menu Overlay */
+.navbar-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #5a7749;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.navbar-menu-checkbox:checked~.navbar-mobile-menu {
+  display: flex;
+}
+
+.navbar-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  z-index: 1001;
+}
+
+/* Mobile/Tablet Menu Button States */
+.navbar-mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 200px;
+  text-align: center;
+  background: transparent;
+  transition: all 0.3s;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Mobile/Tablet Active State */
+.navbar-mobile-menu a:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile/Tablet Shop Button States */
+.navbar-mobile-menu a.navbar-shop-btn {
+  background: #8b1c42;
+  border-color: #8b1c42;
+  margin-top: 20px;
+}
+
+.navbar-mobile-menu a.navbar-shop-btn:active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #8b1c42;
+}
+
+/* Tablet - 704x40 */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    max-width: 768px;
+    padding: 60px 40px;
+  }
+
+  .navbar-header {
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    font-size: 16px;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-menu-toggle {
+    display: flex;
+  }
+
+  /* Tablet Menu - Sidebar Style (351x1020) */
+  .navbar-mobile-menu {
+    width: 351px;
+    left: auto;
+    right: 0;
+    background: linear-gradient(180deg, #4a5f3d 0%, #5a7749 50%, #6b8c5e 100%);
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 15px;
+  }
+
+  .navbar-mobile-menu a {
+    min-width: 250px;
+  }
+
+  .navbar-close-btn {
+    top: 15px;
+    right: 15px;
+    z-index: 1002;
+  }
+
+  .products-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
+
+/* Mobile - 335x32 */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .navbar-header {
+    height: 32px;
+    padding: 0 15px;
+  }
+
+  .navbar-logo {
+    font-size: 14px;
+  }
+
+  .navbar-logo-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-logo-icon span {
+    width: 5px;
+    height: 5px;
+  }
+
+  .navbar-menu-toggle {
+    display: flex;
+  }
+
+  .navbar-menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+
+  .navbar-nav {
+    display: none;
+  }
+
+  /* Mobile full screen menu */
+  .navbar-mobile-menu {
+    width: 100%;
+    right: 0;
+    background: #5a7749;
+  }
+
+  .navbar-close-btn {
+    z-index: 1002;
+  }
+
+  .header h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .products-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}
+
+/* !--Cem - Navbar --> */
