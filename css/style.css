@@ -1,126 +1,3 @@
-/************************************************************************************Mert köroğlu*****************************************************************************/
-/* Genel Ayarlar ve Arka Plan 
-body {
-  background-color: rgba(122, 49, 69, 1);
-  margin: 0;
-  padding: 0;
-  font-family: "Inter Tight", sans-serif;
-}
-
-.container {
-  width: 1280px; /* Figma container genişliği 
-  margin: 0 auto;
-  padding: 100px; /* üst-alt ve sol-sağ 100px 
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 52px; /* Header ile grid arası gap 
-}
-
-/* Başlık Bölümü (Header) 
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 24px; /* Figma'dan gelen gap 
-  max-width: 626px; /* Figma width 
-  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler 
-  opacity: 1;
-}
-
-.baslik {
-  color: rgba(212, 191, 196, 1);
-}
-
-.header h2 {
-  color: rgba(251, 251, 251, 1);
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 64px;
-  margin: 0;
-  font-family: "Inter Tight", sans-serif;
-}
-
-.header p {
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  color: rgba(251, 251, 251, 1);
-}
-
-/* Ürün Kartları Bölümü (CSS Grid Kullanımı) 
-.products-grid {
-  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px 
-  display: grid;
-  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği 
-  gap: 24px;
-  margin: 0 auto; /* container içinde ortalanması için 
-  opacity: 1;
-}
-
-.product-card h3 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 32px;
-  font-family: "Inter Tight", sans-serif;
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: rgba(122, 49, 69, 1); /* Başlık rengi 
-}
-
-.product-card .price {
-  font-size: 16px;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  line-height: 20px;
-  color: rgba(20, 20, 20, 1);
-  margin-bottom: 20px;
-}
-
-/* Ürün Kartı Stili 
-.product-card {
-  width: 344px; /* Figma width 
-  height: 380px; /* Figma height 
-  padding: 32px; /* Figma padding 
-  gap: 10px; /* Figma gap 
-  border-radius: 40px; /* Figma radius 
-  background: rgba(251, 251, 251, 1);
-
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: hidden;
-}
-
-/* Yeni Görsel Stili 
-.product-image {
-  max-width: 280px;
-  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik 
-  max-height: 244px;
-
-  /* Konumlandırma 
-  position: absolute;
-  bottom: 0;
-
-  /* Yatay Ortalama için 
-  left: 50%; /* Görselin başlangıç noktasını ortala 
-
-  /* Dönüşüm (Transform) ile kaydırma: */
-/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama 
-  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla 
-  transform: translateX(-50%) translateY(-10px);
-
-  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla 
-  object-fit: contain;
-}
-
-/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için 
-.product-card h3,
-.product-card .price {
-  position: relative;
-  z-index: 10;
-}/************************************************************************************Mert köroğlu*****************************************************************************/
 /******************************************************************************************Cem Header **************************************************************************/
 * {
   margin: 0;
@@ -387,3 +264,374 @@ body {
   }
 }
 /*********************************************************************************************** Cem Header ****************************************************************************/
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #141414;
+  --white: #fbfbfb;
+  --chianti: #7a3145;
+  --blush: #d4bfc4;
+  --green: #576f35;
+  --grey: #858585;
+  --transparent: rgba(20, 20, 20, 0.2);
+  --greenlight: #3cbc81;
+  --smthwrong: #e74a3b;
+}
+
+:root {
+  --font-family: "Inter Tight", sans-serif;
+  --second-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding: 100px 0px 0px;
+  width: 100%;
+  min-height: 760px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 20px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-section p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works {
+  width: 100%;
+  height: auto;
+}
+
+.how_it_works_image {
+  width: 100%;
+  background-color: var(--chianti);
+  padding: 40px 20px;
+}
+
+.how_it_works_image img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works_text {
+  width: 100%;
+  height: auto;
+  background-color: var(--green);
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.how_it_works_text h2 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.how_it_works .vegetable,
+.easy-steps {
+  color: var(--blush);
+}
+
+.how_it_works_text p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.steps {
+  max-width: 335px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px 0 0;
+}
+
+.step-list {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.circle {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.step-item {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  background-color: var(--white);
+  margin-bottom: 20px;
+  align-items: flex-start;
+  padding: 16px 20px;
+}
+
+.step-item p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--grey);
+  margin: 0;
+  padding-top: 4px;
+}
+
+.the-vegetable,
+.next-to-it,
+.the-basket,
+.fresh-vegetables {
+  font-weight: 700;
+  color: var(--black);
+}
+
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+/**/
+/**/
+/**/
+/***************************************************Mert köroğlu**************************************************/
+/*Genel Ayarlar ve Arka Plan 
+body {
+  background-color: rgba(122, 49, 69, 1);
+  margin: 0;
+  padding: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.container {
+  width: 1280px; 
+  margin: 0 auto;
+  padding: 100px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 52px; /* Header ile grid arası gap *'/
+}
+
+ Başlık Bölümü (Header) 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Figma'dan gelen gap  *'/
+  max-width: 626px; /* Figma width  *'/
+  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler  *'/
+  opacity: 1;
+}
+
+.baslik {
+  color: rgba(212, 191, 196, 1);
+}
+
+.header h2 {
+  color: rgba(251, 251, 251, 1);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 64px;
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.header p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  color: rgba(251, 251, 251, 1);
+}
+
+Ürün Kartları Bölümü (CSS Grid Kullanımı) 
+.products-grid {
+  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px  *'/
+  display: grid;
+  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği  *'/
+  gap: 24px;
+  margin: 0 auto; /* container içinde ortalanması için  *'/
+  opacity: 1;
+}
+
+.product-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgba(122, 49, 69, 1); /* Başlık rengi  *'/
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(20, 20, 20, 1);
+  margin-bottom: 20px;
+}
+
+/* Ürün Kartı Stili 
+.product-card {
+  width: 344px; /* Figma width  *'/
+  height: 380px; /* Figma height  *'/
+  padding: 32px; /* Figma padding  *'/
+  gap: 10px; /* Figma gap 
+  border-radius: 40px; /* Figma radius  *'/
+  background: rgba(251, 251, 251, 1);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+ Yeni Görsel Stili 
+.product-image {
+  max-width: 280px;
+  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik  *'/
+  max-height: 244px;
+
+  /* Konumlandırma  *'/
+  position: absolute;
+  bottom: 0;
+
+  /* Yatay Ortalama için *'/
+  left: 50%; /* Görselin başlangıç noktasını ortala 
+
+  /* Dönüşüm (Transform) ile kaydırma:  *'/
+/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  *'/
+  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla *'/
+  transform: translateX(-50%) translateY(-10px);
+
+  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  *'/
+  object-fit: contain;
+}
+
+/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için  *'/
+.product-card h3,
+.product-card .price {
+  position: relative;
+  z-index: 10;
+}/******************************************Mert köroğlu************************************************ *'/
+.discount {
+text-align: left;
+font-size: 64px;
+padding: 100px;
+text-transform: uppercase;
+}
+/* Discount up to 40%!  *'/
+.discount-highlight {
+background: #576f35;
+color: #fbfbfb;
+padding: 0 6px;
+}
+
+
+/* footer Desktop  *'/
+/* class  *'/
+.foot-main {
+  display: flex;
+  padding: 52px 100px 124px;
+}
+/* logo  *'/
+.foot-logo {
+  width: 265px;
+  margin-right: 250px;
+  color: #fbfbfb;
+}
+/* logo altı yazı  *'/
+.foot-logo p {
+margin-top: 24px;
+font-weight: 500;
+}
+/* how it works, vegetables,rewiew *'/
+.foot-links {
+display: flex;
+flex-direction: column;
+gap: 24px;
+margin-right: 121px;
+}
+/* how it works, vegetables,rewiew yazı  *'/
+.foot-links a {
+color: #fbfbfb;
+font-size: 28px;
+text-transform: uppercase;
+font-weight: 600;
+}
+/* telefon ve adres  *'/
+.foot-contact {
+color: #fbfbfb;
+font-style: normal;
+font-weight: 700;
+width: 216px;
+}
+/* privacy policy, cookie setting, green harvest   *'/
+.foot-end {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 100px 52px;
+color: #d4bfc4;
+}
+/* privacy policy, cookie setting  *'/
+/* sıralı alt alta  *'/
+.foot-end ul {
+display: flex;
+gap: 12px;
+}
+/* green harvest  *'/
+.foot-end p {
+color: #d4bfc4;
+font-weight: 500;
+}*/
