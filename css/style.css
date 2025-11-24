@@ -1,4 +1,832 @@
+<<<<<<< HEAD
 /* Genel Ayarlar */
+=======
+/******************************************************************************************Cem Header **************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+}
+
+/* Desktop Header - 1280x52 */
+.header {
+  background: #5a7749;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.logo-icon span {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Desktop Menu Button States */
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: transparent;
+}
+
+/* Desktop Hover State */
+.nav a:hover {
+  background: rgba(201, 163, 163, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Desktop Active State */
+.nav a:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Desktop Shop Button States */
+.nav a.shop-btn {
+  background: #8b1c42;
+  border-color: #8b1c42;
+}
+
+.nav a.shop-btn:hover {
+  background: #c9a3a3;
+  border-color: #c9a3a3;
+  color: #8b1c42;
+}
+
+.nav a.shop-btn:active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #8b1c42;
+}
+
+/* Checkbox hack for menu toggle */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #5a7749;
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.menu-checkbox:checked ~ .mobile-menu {
+  display: flex;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 40px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Mobile/Tablet Menu Button States */
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 200px;
+  text-align: center;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+/* Mobile/Tablet Active State */
+.mobile-menu a:active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mobile/Tablet Shop Button States */
+.mobile-menu a.shop-btn {
+  background: #8b1c42;
+  border-color: #8b1c42;
+  margin-top: 20px;
+}
+
+.mobile-menu a.shop-btn:active {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  color: #8b1c42;
+}
+
+/* Tablet - 704x40 */
+@media (max-width: 1024px) {
+  .header {
+    height: 40px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Tablet Menu - Sidebar Style (351x1020) */
+  .mobile-menu {
+    width: 351px;
+    left: auto;
+    right: 0;
+    background: linear-gradient(180deg, #4a5f3d 0%, #5a7749 50%, #6b8c5e 100%);
+    justify-content: flex-start;
+    padding-top: 80px;
+    gap: 15px;
+  }
+
+  .mobile-menu a {
+    min-width: 250px;
+  }
+
+  .close-btn {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* Mobile - 335x32 */
+@media (max-width: 768px) {
+  .header {
+    height: 32px;
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .logo-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .logo-icon span {
+    width: 5px;
+    height: 5px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+
+  /* Mobile full screen menu */
+  .mobile-menu {
+    width: 100%;
+    right: 0;
+    background: #5a7749;
+  }
+}
+/*********************************************************************************************** Cem Header ****************************************************************************/
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #141414;
+  --white: #fbfbfb;
+  --chianti: #7a3145;
+  --blush: #d4bfc4;
+  --green: #576f35;
+  --grey: #858585;
+  --transparent: rgba(20, 20, 20, 0.2);
+  --greenlight: #3cbc81;
+  --smthwrong: #e74a3b;
+}
+
+:root {
+  --font-family: "Inter Tight", sans-serif;
+  --second-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  padding: 100px 0px 0px;
+  width: 100%;
+  min-height: 760px;
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 375px;
+  padding: 0 20px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.hero-section p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works {
+  width: 100%;
+  height: auto;
+}
+
+.how_it_works_image {
+  width: 100%;
+  background-color: var(--chianti);
+  padding: 40px 20px;
+}
+
+.how_it_works_image img {
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.how_it_works_text {
+  width: 100%;
+  height: auto;
+  background-color: var(--green);
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.how_it_works_text h2 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.how_it_works .vegetable,
+.easy-steps {
+  color: var(--blush);
+}
+
+.how_it_works_text p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--white);
+}
+
+.steps {
+  max-width: 335px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px 0 0;
+}
+
+.step-list {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.circle {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+.step-item {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  background-color: var(--white);
+  margin-bottom: 20px;
+  align-items: flex-start;
+  padding: 16px 20px;
+}
+
+.step-item p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 143%;
+  color: var(--grey);
+  margin: 0;
+  padding-top: 4px;
+}
+
+.the-vegetable,
+.next-to-it,
+.the-basket,
+.fresh-vegetables {
+  font-weight: 700;
+  color: var(--black);
+}/************************************* your order 
+/* ************************************* oğulcan- your-order */
+* {
+  font-family: "Inter Tight", sans-serif;
+}
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .your-order {
+    background-color: #576f35;
+    height: 1536px;
+  }
+  .form-text {
+    height: 552px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .soc-networks {
+    background-color: #7a3145;
+    border-radius: 30px;
+    margin: 20px;
+    justify-items: center;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Fresh-harvest {
+    padding: 80px 10px 20px 20px;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+  }
+  .our-bowes {
+    padding: 0px 0px 0px 20px;
+    color: #fbfbfb;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Ordering {
+    padding: 40px 0px 30px 20px;
+    text-align: start;
+    color: #141414;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    max-width: 295px;
+  }
+  .buton {
+    width: 295px;
+    height: 52px;
+    background-color: #7a3145;
+    color: #fbfbfb;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 129px;
+    gap: 10px;
+    justify-items: center;
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+  }
+  .inp::placeholder {
+    color: black;
+  }
+  .inp:focus {
+    border-color: brown;
+  }
+  .inp:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+  .inp:not(:placeholder-shown):valid {
+    border-color: green;
+  }
+  .text-valid,
+  .text-invalid {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 4px;
+    display: none;
+  }
+  .inp-wrp {
+    border-radius: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .inp {
+    border-radius: 30px;
+    margin: 8px;
+    width: 279px;
+    height: 48px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 16px;
+  }
+  .text-valid {
+    color: green;
+  }
+  .text-invalid {
+    color: red;
+  }
+  .inp:not(:placeholder-shown):valid ~ .text-valid {
+    display: block;
+  }
+  .inp:not(:placeholder-shown):invalid ~ .text-invalid {
+    display: block;
+  }
+}
+.yorum {
+  margin: 8px;
+  border-radius: 15px;
+  height: 92px;
+  display: flex;
+  border: 1px solid #858585;
+  outline: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.yorum::placeholder {
+  color: #141414;
+}
+.renk-1 {
+  color: #d4bfc4;
+}
+.renk-2 {
+  color: #7a3145;
+}
+.renk-3 {
+  color: #576f35;
+}
+.follow-us {
+  padding: 20px 0px 0px 0px;
+  color: #d4bfc4;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 70px;
+}
+.limon {
+  align-items: center;
+  border-radius: 15px;
+}
+.social-media {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 220px;
+}
+.social {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+/**oğulcan**your-order/
+* {
+  font-family: "Inter Tight", sans-serif;
+}
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .your-order {
+    background-color: #576f35;
+    height: 1536px;
+  }
+  .form-text {
+    height: 552px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .soc-networks {
+    background-color: #7a3145;
+    border-radius: 30px;
+    margin: 20px;
+    justify-items: center;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Fresh-harvest {
+    padding: 80px 10px 20px 20px;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+  }
+  .our-bowes {
+    padding: 0px 0px 0px 20px;
+    color: #fbfbfb;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Ordering {
+    padding: 40px 0px 30px 20px;
+    text-align: start;
+    color: #141414;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    max-width: 295px;
+  }
+  .buton {
+    width: 295px;
+    height: 52px;
+    background-color: #7a3145;
+    color: #fbfbfb;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 129px;
+    gap: 10px;
+    justify-items: center;
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+  }
+  .inp::placeholder {
+    color: black;
+  }
+  .inp:focus {
+    border-color: brown;
+  }
+  .inp:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+  .inp:not(:placeholder-shown):valid {
+    border-color: green;
+  }
+  .text-valid,
+  .text-invalid {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 4px;
+    display: none;
+  }
+  .inp-wrp {
+    border-radius: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .inp {
+    border-radius: 30px;
+    margin: 8px;
+    width: 279px;
+    height: 48px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 16px;
+  }
+  .text-valid {
+    color: green;
+  }
+  .text-invalid {
+    color: red;
+  }
+  .inp:not(:placeholder-shown):valid ~ .text-valid {
+    display: block;
+  }
+  .inp:not(:placeholder-shown):invalid ~ .text-invalid {
+    display: block;
+  }
+}
+.yorum {
+  margin: 8px;
+  border-radius: 15px;
+  width: 263px;
+  height: 76px;
+  display: flex;
+  border: 1px solid #858585;
+  outline: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.yorum::placeholder {
+  color: #141414;
+}
+.renk-1 {
+  color: #d4bfc4;
+}
+.renk-2 {
+  color: #7a3145;
+}
+.renk-3 {
+  color: #576f35;
+}
+.follow-us {
+  padding: 20px 0px 0px 0px;
+  color: #d4bfc4;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 70px;
+}
+.limon {
+  align-items: center;
+  border-radius: 15px;
+}
+.social-media {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 220px;
+  margin-right: 110px;
+}
+.social {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+/**/
+/**/
+/**/
+/***************************************************Mert köroğlu**************************************************/
+/*Genel Ayarlar ve Arka Plan 
+>>>>>>> main
 body {
   background-color: rgba(122, 49, 69, 1);
   margin: 0;
@@ -6,6 +834,7 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
+<<<<<<< HEAD
 /* Ana bölüm kapsayıcı */
 .vegetable-section .container {
   width: 1280px;
@@ -22,6 +851,26 @@ body {
   flex-direction: column;
   gap: 24px;
   max-width: 626px;
+=======
+.container {
+  width: 1280px; 
+  margin: 0 auto;
+  padding: 100px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 52px; /* Header ile grid arası gap *'/
+}
+
+ Başlık Bölümü (Header) 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Figma'dan gelen gap  *'/
+  max-width: 626px; /* Figma width  *'/
+  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler  *'/
+  opacity: 1;
+>>>>>>> main
 }
 
 .vegetable-section .baslik {
@@ -43,6 +892,7 @@ body {
   color: #fbfbfb;
 }
 
+<<<<<<< HEAD
 /* Grid */
 .vegetable-section .products-grid {
   list-style: none;
@@ -63,19 +913,96 @@ body {
   border-radius: 40px;
   padding: 32px;
 
+=======
+Ürün Kartları Bölümü (CSS Grid Kullanımı) 
+.products-grid {
+  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px  *'/
+  display: grid;
+  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği  *'/
+  gap: 24px;
+  margin: 0 auto; /* container içinde ortalanması için  *'/
+  opacity: 1;
+}
+
+.product-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: rgba(122, 49, 69, 1); /* Başlık rengi  *'/
+}
+
+.product-card .price {
+  font-size: 16px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(20, 20, 20, 1);
+  margin-bottom: 20px;
+}
+
+/* Ürün Kartı Stili 
+.product-card {
+  width: 344px; /* Figma width  *'/
+  height: 380px; /* Figma height  *'/
+  padding: 32px; /* Figma padding  *'/
+  gap: 10px; /* Figma gap 
+  border-radius: 40px; /* Figma radius  *'/
+  background: rgba(251, 251, 251, 1);
+
+  position: relative;
+>>>>>>> main
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .vegetable-section .product-card h3 {
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 5px 0;
   color: rgba(122, 49, 69, 1);
-  z-index: 10;
+=======
+ Yeni Görsel Stili 
+.product-image {
+  max-width: 280px;
+  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik  *'/
+  max-height: 244px;
+
+  /* Konumlandırma  *'/
+  position: absolute;
+  bottom: 0;
+
+  /* Yatay Ortalama için *'/
+  left: 50%; /* Görselin başlangıç noktasını ortala 
+
+  /* Dönüşüm (Transform) ile kaydırma:  *'/
+/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  *'/
+  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla *'/
+  transform: translateX(-50%) translateY(-10px);
+
+  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  *'/
+  object-fit: contain;
 }
+
+/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için  *'/
+.product-card h3,
+.product-card .price {
+  position: relative;
+>>>>>>> main
+  z-index: 10;
+}/******************************************Mert köroğlu************************************************ *'/
+.discount {
+text-align: left;
+font-size: 64px;
+padding: 100px;
+text-transform: uppercase;
+}
+<<<<<<< HEAD
 
 .vegetable-section .product-card .price {
   font-size: 16px;
@@ -97,3 +1024,245 @@ body {
 
   object-fit: contain;
 }
+=======
+/* Discount up to 40%!  *'/
+.discount-highlight {
+background: #576f35;
+color: #fbfbfb;
+padding: 0 6px;
+}
+
+
+/* footer Desktop  *'/
+/* class  *'/
+.foot-main {
+  display: flex;
+  padding: 52px 100px 124px;
+}
+/* logo  *'/
+.foot-logo {
+  width: 265px;
+  margin-right: 250px;
+  color: #fbfbfb;
+}
+/* logo altı yazı  *'/
+.foot-logo p {
+margin-top: 24px;
+font-weight: 500;
+}
+/* how it works, vegetables,rewiew *'/
+.foot-links {
+display: flex;
+flex-direction: column;
+gap: 24px;
+margin-right: 121px;
+}
+/* how it works, vegetables,rewiew yazı  *'/
+.foot-links a {
+color: #fbfbfb;
+font-size: 28px;
+text-transform: uppercase;
+font-weight: 600;
+}
+/* telefon ve adres  *'/
+.foot-contact {
+color: #fbfbfb;
+font-style: normal;
+font-weight: 700;
+width: 216px;
+}
+/* privacy policy, cookie setting, green harvest   *'/
+.foot-end {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 100px 52px;
+color: #d4bfc4;
+}
+/* privacy policy, cookie setting  *'/
+/* sıralı alt alta  *'/
+.foot-end ul {
+display: flex;
+gap: 12px;
+}
+/* green harvest  *'/
+.foot-end p {
+color: #d4bfc4;
+font-weight: 500;
+}*/
+
+
+
+         /*------------Mert Nukan reviews---------*/
+    
+         /* Reviews from our customers bolumu */
+         .customer-reviews-section {
+           margin-top: 100px;
+           background-color: white;
+           padding-bottom: 100px;
+         }
+    
+         /*Baslik kismi Desktop formati */
+         .reviews-header {
+           background-color: white;
+         }
+    
+         .reviews-header h2 {
+           font-size: 48px;
+           font-weight: 600;
+           line-height: 52px;
+           color: rgba(14, 14, 14, 14);
+           font-family: "Inter Tight", sans-serif;
+           letter-spacing: 1.5;
+           text-transform: uppercase;
+           margin-top: 80px;
+           margin-left: 20px;
+    
+         }
+    
+         .reviews-header .h2baslik {
+           color: #576F35;
+         }
+    
+         .reviews-header p {
+           font-size: 14px;
+           font-weight: 500;
+           line-height: 20px;
+           color: rgba(14, 14, 14, 1);
+           font-family: "Inter Tight", sans-serif;
+           margin-top: 20px;
+           padding-left: 20px;
+    
+         }
+    
+         /* Reviews kartlari bolumu */
+         .customerreviews {
+           display: flex;
+           gap: 18px;
+           margin-top: 40px;
+           padding-left: 20px;
+           padding-right: 20px;
+         }
+    
+         .customerreviews li {
+           list-style: none;
+         }
+    
+         .customerreviews h3 {
+           font-size: 18px;
+           font-weight: 600;
+           line-height: 20px;
+           color: rgba(14, 14, 14, 1);
+           font-family: "Inter Tight", sans-serif;
+           margin-top: 10px;
+           margin-bottom: 5px;
+         }
+    
+         .customerreviews p {
+           font-size: 14px;
+           font-weight: 500;
+           line-height: 20px;
+           color: #858585;
+           font-family: "Inter Tight", sans-serif;
+           margin: 0;
+           text-align: center;
+         }
+    
+         .customercard,
+         .customercard2,
+         .customercard3 {
+           border: 1px solid #D4BFC4;
+           border-radius: 24px;
+           display: none;
+           flex-direction: column;
+           align-items: center;
+           padding: 20px;
+           gap: 8px;
+         }
+    
+         .customercard2,
+         .customercard3 {
+           display: none;
+         }
+    
+         .review-card {
+           /*Resimlerin ve cercevenin boyutlandirmasi*/
+           width: 56px;
+           height: 56px;
+           border-radius: 50%;
+           background-color: #E0E0E0;
+         }
+    
+         /* Responsive Design Ayarlari */
+         @media (max-width: 375px) {
+           .customercard {
+             display: flex;
+           }
+         }
+    
+         @media (min-width: 376px) and (max-width: 768px) {
+    
+           .customercard,
+           .customercard2 {
+             display: flex;
+           }
+    
+           .customerreviews {
+             display: flex;
+             gap: 24px;
+             margin-top: 52px;
+             padding-left: 32px;
+             padding-right: 32px;
+           }
+    
+           .reviews-header h2 {
+             font-size: 64px;
+             margin-top: 100px;
+             margin-left: 32px;
+    
+           }
+    
+           .reviews-header p {
+             font-size: 16px;
+             margin-top: 24px;
+             margin: 32px;
+    
+           }
+         }
+    
+         @media (min-width: 769px) {
+    
+           .customercard,
+           .customercard2,
+           .customercard3 {
+             display: flex;
+           }
+    
+           .customerreviews {
+             display: flex;
+             gap: 24px;
+             margin-top: 52px;
+             padding-left: 100px;
+             padding-right: 100px;
+           }
+    
+           .reviews-header h2 {
+             font-size: 64px;
+             margin-top: 100px;
+             margin-left: 100px;
+    
+           }
+    
+           .reviews-header p {
+             font-size: 16px;
+             margin-top: 24px;
+             margin-left: 100px;
+    
+           }
+         }
+    
+    
+    
+         /******************************************Mert Nukan************************************************ *'/
+
+>>>>>>> main
