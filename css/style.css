@@ -933,7 +933,7 @@ body {
   margin-top: 0;
   margin-bottom: 5px;
   color: rgba(122, 49, 69, 1); /* Başlık rengi  */
-  letter-spacing: -1.5%; /* Figma'dan gelen letter-spacing  */
+  letter-spacing: -1.5%; /* Figma'dan gelen letter-spacing eklendi */
 }
 
 .product-card .price {
