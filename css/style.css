@@ -883,6 +883,7 @@ body {
   font-weight: 600;
   line-height: 64px;
   margin: 0;
+  letter-spacing: -1.5%;
 }
 
 .vegetable-section .intro p {
@@ -932,6 +933,7 @@ body {
   margin-top: 0;
   margin-bottom: 5px;
   color: rgba(122, 49, 69, 1); /* Başlık rengi  */
+  letter-spacing: -1.5%;
 }
 
 .product-card .price {
