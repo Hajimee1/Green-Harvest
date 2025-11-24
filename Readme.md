@@ -1,6 +1,6 @@
 # Katkı Kuralları
 
-1. main branch’e direkt push yasaktır.
+1. main branch’e direkt push yasaktır..
 2. Herkes kendi branch’ini açar:
    git checkout -b isim-ozellik
 3. Kod bittikten sonra Pull Request açılır
