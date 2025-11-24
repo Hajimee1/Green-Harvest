@@ -825,7 +825,7 @@ body {
 /**/
 /**/
 /***************************************************Mert köroğlu**************************************************/
-/*Genel Ayarlar ve Arka Plan 
+/*Genel Ayarlar ve Arka Plan */
 >>>>>>> main
 body {
   background-color: rgba(122, 49, 69, 1);
@@ -851,7 +851,8 @@ body {
   flex-direction: column;
   gap: 24px;
   max-width: 626px;
-=======
+}
+
 .container {
   width: 1280px; 
   margin: 0 auto;
@@ -859,18 +860,18 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 52px; /* Header ile grid arası gap *'/
+  gap: 52px; /* Header ile grid arası gap */
 }
 
- Başlık Bölümü (Header) 
+
+ /*Başlık Bölümü (Header) */
 .header {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Figma'dan gelen gap  *'/
-  max-width: 626px; /* Figma width  *'/
-  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler  *'/
+  gap: 24px; /* Figma'dan gelen gap  */
+  max-width: 626px; /* Figma width  */
+  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler  */
   opacity: 1;
->>>>>>> main
 }
 
 .vegetable-section .baslik {
@@ -892,7 +893,7 @@ body {
   color: #fbfbfb;
 }
 
-<<<<<<< HEAD
+
 /* Grid */
 .vegetable-section .products-grid {
   list-style: none;
@@ -912,15 +913,15 @@ body {
   background: #fbfbfb;
   border-radius: 40px;
   padding: 32px;
+}
 
-=======
-Ürün Kartları Bölümü (CSS Grid Kullanımı) 
+/*Ürün Kartları Bölümü (CSS Grid Kullanımı) */
 .products-grid {
-  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px  *'/
+  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px  */
   display: grid;
-  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği  *'/
+  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği  */
   gap: 24px;
-  margin: 0 auto; /* container içinde ortalanması için  *'/
+  margin: 0 auto; /* container içinde ortalanması için  */
   opacity: 1;
 }
 
@@ -931,7 +932,7 @@ body {
   font-family: "Inter Tight", sans-serif;
   margin-top: 0;
   margin-bottom: 5px;
-  color: rgba(122, 49, 69, 1); /* Başlık rengi  *'/
+  color: rgba(122, 49, 69, 1); /* Başlık rengi  */
 }
 
 .product-card .price {
@@ -943,66 +944,61 @@ body {
   margin-bottom: 20px;
 }
 
-/* Ürün Kartı Stili 
+/* Ürün Kartı Stili */
 .product-card {
-  width: 344px; /* Figma width  *'/
-  height: 380px; /* Figma height  *'/
-  padding: 32px; /* Figma padding  *'/
+  width: 344px; /* Figma width  */
+  height: 380px; /* Figma height  */
+  padding: 32px; /* Figma padding  */
   gap: 10px; /* Figma gap 
-  border-radius: 40px; /* Figma radius  *'/
+  border-radius: 40px; /* Figma radius  */
   background: rgba(251, 251, 251, 1);
-
-  position: relative;
->>>>>>> main
+position: relative;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 .vegetable-section .product-card h3 {
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 5px 0;
   color: rgba(122, 49, 69, 1);
-=======
- Yeni Görsel Stili 
+
+ /*Yeni Görsel Stili */
 .product-image {
   max-width: 280px;
   /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik  *'/
   max-height: 244px;
 
-  /* Konumlandırma  *'/
+  /* Konumlandırma  */
   position: absolute;
   bottom: 0;
 
-  /* Yatay Ortalama için *'/
-  left: 50%; /* Görselin başlangıç noktasını ortala 
+  /* Yatay Ortalama için */
+  left: 50%; /* Görselin başlangıç noktasını ortala */
 
-  /* Dönüşüm (Transform) ile kaydırma:  *'/
-/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  *'/
-  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla *'/
+  /* Dönüşüm (Transform) ile kaydırma:  */
+/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  */
+  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla */
   transform: translateX(-50%) translateY(-10px);
 
-  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  *'/
+  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  */
   object-fit: contain;
 }
 
-/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için  *'/
+/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için  */
 .product-card h3,
 .product-card .price {
   position: relative;
->>>>>>> main
-  z-index: 10;
-}/******************************************Mert köroğlu************************************************ *'/
+z-index: 10;
+}
 .discount {
 text-align: left;
 font-size: 64px;
 padding: 100px;
 text-transform: uppercase;
 }
-<<<<<<< HEAD
 
 .vegetable-section .product-card .price {
   font-size: 16px;
@@ -1016,15 +1012,12 @@ text-transform: uppercase;
 .vegetable-section .product-image {
   max-width: 280px;
   max-height: 244px;
-
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) translateY(-10px);
-
   object-fit: contain;
 }
-=======
 /* Discount up to 40%!  *'/
 .discount-highlight {
 background: #576f35;
