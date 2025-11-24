@@ -435,6 +435,386 @@ body {
 .fresh-vegetables {
   font-weight: 700;
   color: var(--black);
+}/************************************* your order 
+/* ************************************* oğulcan- your-order */
+* {
+  font-family: "Inter Tight", sans-serif;
+}
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .your-order {
+    background-color: #576f35;
+    height: 1536px;
+  }
+  .form-text {
+    height: 552px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .soc-networks {
+    background-color: #7a3145;
+    border-radius: 30px;
+    margin: 20px;
+    justify-items: center;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Fresh-harvest {
+    padding: 80px 10px 20px 20px;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+  }
+  .our-bowes {
+    padding: 0px 0px 0px 20px;
+    color: #fbfbfb;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Ordering {
+    padding: 40px 0px 30px 20px;
+    text-align: start;
+    color: #141414;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    max-width: 295px;
+  }
+  .buton {
+    width: 295px;
+    height: 52px;
+    background-color: #7a3145;
+    color: #fbfbfb;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 129px;
+    gap: 10px;
+    justify-items: center;
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+  }
+  .inp::placeholder {
+    color: black;
+  }
+  .inp:focus {
+    border-color: brown;
+  }
+  .inp:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+  .inp:not(:placeholder-shown):valid {
+    border-color: green;
+  }
+  .text-valid,
+  .text-invalid {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 4px;
+    display: none;
+  }
+  .inp-wrp {
+    border-radius: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .inp {
+    border-radius: 30px;
+    margin: 8px;
+    width: 279px;
+    height: 48px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 16px;
+  }
+  .text-valid {
+    color: green;
+  }
+  .text-invalid {
+    color: red;
+  }
+  .inp:not(:placeholder-shown):valid ~ .text-valid {
+    display: block;
+  }
+  .inp:not(:placeholder-shown):invalid ~ .text-invalid {
+    display: block;
+  }
+}
+.yorum {
+  margin: 8px;
+  border-radius: 15px;
+  height: 92px;
+  display: flex;
+  border: 1px solid #858585;
+  outline: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.yorum::placeholder {
+  color: #141414;
+}
+.renk-1 {
+  color: #d4bfc4;
+}
+.renk-2 {
+  color: #7a3145;
+}
+.renk-3 {
+  color: #576f35;
+}
+.follow-us {
+  padding: 20px 0px 0px 0px;
+  color: #d4bfc4;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 70px;
+}
+.limon {
+  align-items: center;
+  border-radius: 15px;
+}
+.social-media {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 220px;
+}
+.social {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+/**oğulcan**your-order/
+* {
+  font-family: "Inter Tight", sans-serif;
+}
+@media (min-width: 320px) {
+  * {
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .your-order {
+    background-color: #576f35;
+    height: 1536px;
+  }
+  .form-text {
+    height: 552px;
+    background-color: #fbfbfb;
+    border-radius: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .soc-networks {
+    background-color: #7a3145;
+    border-radius: 30px;
+    margin: 20px;
+    justify-items: center;
+    height: 456px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Fresh-harvest {
+    padding: 80px 10px 20px 20px;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 52px;
+    text-transform: uppercase;
+  }
+  .our-bowes {
+    padding: 0px 0px 0px 20px;
+    color: #fbfbfb;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .Ordering {
+    padding: 40px 0px 30px 20px;
+    text-align: start;
+    color: #141414;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.015em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    max-width: 295px;
+  }
+  .buton {
+    width: 295px;
+    height: 52px;
+    background-color: #7a3145;
+    color: #fbfbfb;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 129px;
+    gap: 10px;
+    justify-items: center;
+    position: relative;
+    bottom: 30px;
+    font-size: 18px;
+  }
+  .inp::placeholder {
+    color: black;
+  }
+  .inp:focus {
+    border-color: brown;
+  }
+  .inp:not(:placeholder-shown):invalid {
+    border-color: red;
+  }
+  .inp:not(:placeholder-shown):valid {
+    border-color: green;
+  }
+  .text-valid,
+  .text-invalid {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 4px;
+    display: none;
+  }
+  .inp-wrp {
+    border-radius: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .inp {
+    border-radius: 30px;
+    margin: 8px;
+    width: 279px;
+    height: 48px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    outline: none;
+    padding-left: 16px;
+  }
+  .text-valid {
+    color: green;
+  }
+  .text-invalid {
+    color: red;
+  }
+  .inp:not(:placeholder-shown):valid ~ .text-valid {
+    display: block;
+  }
+  .inp:not(:placeholder-shown):invalid ~ .text-invalid {
+    display: block;
+  }
+}
+.yorum {
+  margin: 8px;
+  border-radius: 15px;
+  width: 263px;
+  height: 76px;
+  display: flex;
+  border: 1px solid #858585;
+  outline: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.yorum::placeholder {
+  color: #141414;
+}
+.renk-1 {
+  color: #d4bfc4;
+}
+.renk-2 {
+  color: #7a3145;
+}
+.renk-3 {
+  color: #576f35;
+}
+.follow-us {
+  padding: 20px 0px 0px 0px;
+  color: #d4bfc4;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 70px;
+}
+.limon {
+  align-items: center;
+  border-radius: 15px;
+}
+.social-media {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 220px;
+  margin-right: 110px;
+}
+.social {
+  color: #fbfbfb;
+  text-decoration: none;
 }
 
 /* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
