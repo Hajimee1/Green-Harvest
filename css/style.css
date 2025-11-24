@@ -1,4 +1,4 @@
-/* Genel Ayarlar ve Arka Plan */
+/* Genel Ayarlar */
 body {
   background-color: rgba(122, 49, 69, 1);
   margin: 0;
@@ -6,117 +6,94 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
-.container {
-  width: 1280px; /* Figma container genişliği */
+/* Ana bölüm kapsayıcı */
+.vegetable-section .container {
+  width: 1280px;
   margin: 0 auto;
-  padding: 100px; /* üst-alt ve sol-sağ 100px */
-  box-sizing: border-box;
+  padding: 100px;
   display: flex;
   flex-direction: column;
-  gap: 52px; /* Header ile grid arası gap */
+  gap: 52px;
 }
 
-/* Başlık Bölümü (Header) */
-.header {
+/* Başlık bölümü */
+.vegetable-section .intro {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Figma'dan gelen gap */
-  max-width: 626px; /* Figma width */
-  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler */
-  opacity: 1;
+  gap: 24px;
+  max-width: 626px;
 }
 
-.baslik {
+.vegetable-section .baslik {
   color: rgba(212, 191, 196, 1);
 }
 
-.header h2 {
-  color: rgba(251, 251, 251, 1);
-  font-weight: 600;
+.vegetable-section .intro h2 {
+  color: #fbfbfb;
   font-size: 64px;
+  font-weight: 600;
   line-height: 64px;
   margin: 0;
-  font-family: "Inter Tight", sans-serif;
 }
 
-.header p {
+.vegetable-section .intro p {
   font-size: 16px;
   line-height: 20px;
-  font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  color: rgba(251, 251, 251, 1);
+  color: #fbfbfb;
 }
 
-/* Ürün Kartları Bölümü (CSS Grid Kullanımı) */
-.products-grid {
-  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px */
+/* Grid */
+.vegetable-section .products-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+
+  width: 1080px;
   display: grid;
-  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği */
+  grid-template-columns: repeat(3, 344px);
   gap: 24px;
-  margin: 0 auto; /* container içinde ortalanması için */
-  opacity: 1;
 }
 
-.product-card h3 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 32px;
-  font-family: "Inter Tight", sans-serif;
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: rgba(122, 49, 69, 1); /* Başlık rengi */
-}
+/* Kart */
+.vegetable-section .product-card {
+  width: 344px;
+  height: 380px;
+  background: #fbfbfb;
+  border-radius: 40px;
+  padding: 32px;
 
-.product-card .price {
-  font-size: 16px;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  line-height: 20px;
-  color: rgba(20, 20, 20, 1);
-  margin-bottom: 20px;
-}
-
-/* Ürün Kartı Stili */
-.product-card {
-  width: 344px; /* Figma width */
-  height: 380px; /* Figma height */
-  padding: 32px; /* Figma padding */
-  gap: 10px; /* Figma gap */
-  border-radius: 40px; /* Figma radius */
-  background: rgba(251, 251, 251, 1);
-
-  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  position: relative;
   overflow: hidden;
 }
 
-/* Yeni Görsel Stili */
-.product-image {
-  max-width: 280px;
-  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik */
-  max-height: 244px;
-
-  /* Konumlandırma */
-  position: absolute;
-  bottom: 0;
-
-  /* Yatay Ortalama için */
-  left: 50%; /* Görselin başlangıç noktasını ortala */
-
-  /* Dönüşüm (Transform) ile kaydırma: */
-  /* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama */
-  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla */
-  transform: translateX(-50%) translateY(-10px);
-
-  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla */
-  object-fit: contain;
+.vegetable-section .product-card h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+  color: rgba(122, 49, 69, 1);
+  z-index: 10;
 }
 
-/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için */
-.product-card h3,
-.product-card .price {
-  position: relative;
+.vegetable-section .product-card .price {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: rgba(20, 20, 20, 1);
   z-index: 10;
+}
+
+/* Ürün görseli */
+.vegetable-section .product-image {
+  max-width: 280px;
+  max-height: 244px;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+
+  object-fit: contain;
 }
