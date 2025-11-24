@@ -826,7 +826,6 @@ body {
 /**/
 /***************************************************Mert köroğlu**************************************************/
 /*Genel Ayarlar ve Arka Plan */
->>>>>>> main
 body {
   background-color: rgba(122, 49, 69, 1);
   margin: 0;
@@ -964,26 +963,18 @@ position: relative;
   font-weight: 600;
   margin: 0 0 5px 0;
   color: rgba(122, 49, 69, 1);
+}
 
- /*Yeni Görsel Stili */
+/* Yeni Görsel Stili */
 .product-image {
-  max-width: 280px;
-  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik  *'/
-  max-height: 244px;
-
-  /* Konumlandırma  */
-  position: absolute;
-  bottom: 0;
-
-  /* Yatay Ortalama için */
-  left: 50%; /* Görselin başlangıç noktasını ortala */
-
-  /* Dönüşüm (Transform) ile kaydırma:  */
-/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  */
-  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla */
+  max-width: 280px; /* Görselin kartta kaplayacağı maksimum genişlik */
+  max-height: 244px; /* Görselin kartta kaplayacağı maksimum yükseklik */
+  position: absolute; /* Kart içinde mutlak konumlandırma */
+  bottom: 0; /* Kartın altına hizalama */
+  left: 50%; /* Yatayda ortalamak için başlangıç noktası */
   transform: translateX(-50%) translateY(-10px);
-
-  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  */
+  /* translateX(-50%) => Görseli yatayda tam ortala
+     translateY(-10px) => Görseli hafif yukarı kaydır (metinle çakışmayı önler) */
   object-fit: contain;
 }
 
@@ -1018,6 +1009,7 @@ text-transform: uppercase;
   transform: translateX(-50%) translateY(-10px);
   object-fit: contain;
 }
+
 /* Discount up to 40%!  *'/
 .discount-highlight {
 background: #576f35;
