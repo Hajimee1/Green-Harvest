@@ -504,7 +504,7 @@ body {
     text-transform: uppercase;
   }
   .send-button {
-    padding: 12px 20px 40px 20px;
+    padding: 20px 20px 40px 20px;
   }
   .buton {
     background-color: #7a3145;
@@ -539,19 +539,17 @@ body {
   }
   .inp-wrp {
     border-radius: 30px;
-
     display: flex;
     flex-direction: column;
   }
+  
   .inp {
-    border-radius: 30px;
-    margin: 8px;
-    width: 279px;
+    padding: 0px 16px;
+    width: 295px;
     height: 48px;
     border: 1px solid gray;
     border-radius: 30px;
     outline: none;
-    padding-left: 16px;
     font-size: 14px;
   }
   .text-valid {
@@ -570,10 +568,10 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+   gap: 16px;
   }
 }
 .yorum {
-  margin: 8px;
   border-radius: 15px;
   height: 92px;
   display: flex;
