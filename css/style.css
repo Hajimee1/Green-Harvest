@@ -665,128 +665,133 @@ body {
 /**/
 /**/
 /***************************************************Mert köroğlu**************************************************/
-/*Genel Ayarlar ve Arka Plan 
-body {
+/* MOBILE-FIRST (375px tasarımı) */
+
+/* 🍇 SECTİON: Bölümün tamamını 375px ile sınırlar ve ortalar */
+.vegetable-section {
   background-color: rgba(122, 49, 69, 1);
-  margin: 0;
-  padding: 0;
-  font-family: "Inter Tight", sans-serif;
-}
-
-.container {
-  width: 1280px; 
+  /* KRİTİK DÜZELTME: Tüm section'ı 375px'te tutmak ve tarayıcıda ortalamak */
+  width: 100%;
+  max-width: 375px;
   margin: 0 auto;
-  padding: 100px; 
+}
+
+/* 🍎 CONTAINER: Kenarlarda 20px padding bırakarak içeriği yönetir */
+.vegetable-section .veg-container {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Bölümler arası boşluk */
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 52px; /* Header ile grid arası gap *'/
+  margin: 0 auto;
+  /* DÜZELTME: 100% genişlik, padding ile birlikte 375px'i korur (Taşmayı önler) */
+  width: 100%;
 }
 
- Başlık Bölümü (Header) 
-.header {
-  display: flex;
-  flex-direction: column;
-  gap: 24px; /* Figma'dan gelen gap  *'/
-  max-width: 626px; /* Figma width  *'/
-  height: auto; /* Figma height kullanılmaz, içerik kendi yüksekliğini belirler  *'/
-  opacity: 1;
-}
-
-.baslik {
-  color: rgba(212, 191, 196, 1);
-}
-
-.header h2 {
-  color: rgba(251, 251, 251, 1);
-  font-weight: 600;
-  font-size: 64px;
-  line-height: 64px;
+/* 🥦 INTRO BAŞLIK (ORGANIC VEGETABLES) */
+.vegetable-section .intro h2 {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 48px;
+  line-height: 1.0833; /* 52px */
+  letter-spacing: -0.42px;
+  text-transform: uppercase;
   margin: 0;
-  font-family: "Inter Tight", sans-serif;
-}
+  color: #fbfbfb; /* Beyaz */
 
-.header p {
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  color: rgba(251, 251, 251, 1);
-}
-
-Ürün Kartları Bölümü (CSS Grid Kullanımı) 
-.products-grid {
-  width: 1080px; /* 3 kart × 344px + 2 gap 24px = 1080px  *'/
-  display: grid;
-  grid-template-columns: repeat(3, 344px); /* birebir kart genişliği  *'/
-  gap: 24px;
-  margin: 0 auto; /* container içinde ortalanması için  *'/
-  opacity: 1;
-}
-
-.product-card h3 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 32px;
-  font-family: "Inter Tight", sans-serif;
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: rgba(122, 49, 69, 1); /* Başlık rengi  *'/
-}
-
-.product-card .price {
-  font-size: 16px;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  line-height: 20px;
-  color: rgba(20, 20, 20, 1);
+  /* DÜZELTME 1: Başlık altındaki boşluk 20px olarak güncellendi */
   margin-bottom: 20px;
 }
 
-/* Ürün Kartı Stili 
-.product-card {
-  width: 344px; /* Figma width  *'/
-  height: 380px; /* Figma height  *'/
-  padding: 32px; /* Figma padding  *'/
-  gap: 10px; /* Figma gap 
-  border-radius: 40px; /* Figma radius  *'/
-  background: rgba(251, 251, 251, 1);
+/* 🍠 INTRO BAŞLIK - VEGETABLES kısmı */
+.vegetable-section .intro .veg-baslik {
+  display: block;
+  color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
+}
 
-  position: relative;
+/* 🥕 INTRO PARAGRAF */
+.vegetable-section .intro p {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 14px;
+  line-height: 1.4286; /* 20px */
+  letter-spacing: 0%;
+  /* DÜZELTME: Üstteki 12px boşluk h2'den geldiği için margin-top sıfırlanır */
+  margin: 0;
+  color: #fbfbfb; /* Beyaz */
+}
+
+/* 🍆 ÜRÜN KARTI BAŞLIĞI (EGGPLANT, LEEK vb.) */
+.vegetable-section .veg-title-product {
+  color: rgba(122, 49, 69, 1); /* Koyu Kırmızı/Mor */
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.42px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 💰 ÜRÜN KARTLARI FİYAT METNİ */
+.vegetable-section .product-card .price {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 14px;
+  line-height: 1.4286; /* 20px */
+  letter-spacing: 0%;
+  /* DÜZELTME: Marjinler sıfırlanır */
+  margin: 0;
+  color: rgba(20, 20, 20, 1); /* Koyu Gri/Siyah */
+  padding-top: 12px; /* REVIZYON 2 h3 margin bottom 12px yerine p'ye alt ve üstten 12px padding verildi */
+  padding-bottom: 12px;
+}
+
+/* 🖼️ ÜRÜN KARTLARI: BEYAZ KUTULAR */
+.vegetable-section .product-card {
+  background-color: white;
+  border-radius: 40px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 0;
+  /* DÜZELTME: İçerik tam genişlikte olmalı (335px) */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+
+  /* KRİTİK: YÜKSEKLİK VE KONUMLANDIRMA */
+  position: relative;
+  height: 384px;
   overflow: hidden;
 }
 
- Yeni Görsel Stili 
-.product-image {
-  max-width: 280px;
-  /* Görselin kartın alt kısmında kaplayacağı maksimum yükseklik  *'/
-  max-height: 244px;
+/* 🖼️ ÜRÜN GÖRSELLERİ: KARTIN ALTINA HİZALAMA */
+.vegetable-section .product-image {
+  width: 280px;
+  height: 240px;
+  display: block;
 
-  /* Konumlandırma  *'/
+  /* KRİTİK: Mutlak Konumlandırma */
   position: absolute;
-  bottom: 0;
-
-  /* Yatay Ortalama için *'/
-  left: 50%; /* Görselin başlangıç noktasını ortala 
-
-  /* Dönüşüm (Transform) ile kaydırma:  *'/
-/* Yatayda kendi genişliğinin yarısı kadar sola kaydırarak tam ortalama  *'/
-  /* Dikeyde ise hafifçe yukarı kaydırarak metinle çakışmamasını sağla *'/
-  transform: translateX(-50%) translateY(-10px);
-
-  /* Görselin en boy oranını koruyarak kartın içindeki alana sığmasını sağla  *'/
-  object-fit: contain;
+  bottom: 32px; /* Kartın altından 32px yukarıda */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-/* Kartın içindeki metinlerin (başlık ve fiyat) görselin önünde kalmasını garantilemek için  *'/
-.product-card h3,
-.product-card .price {
-  position: relative;
-  z-index: 10;
-}/******************************************Mert köroğlu************************************************ *'/
+/* 📜 ÜRÜN LİSTESİ DÜZENİ */
+.vegetable-section .products-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Kartlar arası 20px boşluk */
+}
+
+/******************************************Mert köroğlu************************************************ *'/
 .discount {
 text-align: left;
 font-size: 64px;
@@ -859,183 +864,326 @@ color: #d4bfc4;
 font-weight: 500;
 }*/
 
+/*------------Mert Nukan reviews---------*/
 
+/* Reviews from our customers bolumu */
+.customer-reviews-section {
+  margin-top: 100px;
+  background-color: white;
+  margin-bottom: 80px;
+}
 
-         /*------------Mert Nukan reviews---------*/
-    
-         /* Reviews from our customers bolumu */
-         .customer-reviews-section {
-           margin-top: 100px;
-           background-color: white;
-           margin-bottom: 80px;
-         }
-    
-         /*Baslik kismi Desktop formati */
-         .reviews-header {
-           background-color: white;
-         }
-    
-         .reviews-header h2 {
-           font-size: 48px;
-           font-weight: 600;
-           line-height: 1.08;
-           color: rgba(14, 14, 14, 14);
-           font-family: "Inter Tight", sans-serif;
-           letter-spacing: 1.5;
-           text-transform: uppercase;
-           margin-top: 80px;
-           margin-left: 20px;
-           margin-right: 20px;
-    
-         }
-    
-         .reviews-header .h2baslik {
-           color: #576F35;
-         }
-    
-         .reviews-header p {
-           font-size: 14px;
-           font-weight: 500;
-           line-height: 20px;
-           color: rgba(14, 14, 14, 1);
-           font-family: "Inter Tight", sans-serif;
-           margin-top: 20px;
-           margin-left: 20px;
-           margin-right: 20px;
-    
-         }
-    
-         /* Reviews kartlari bolumu */
-         .customerreviews {
-           margin-top: 40px;
-           margin-bottom: 60px;
-           padding: 20px 16px
-         }
-    
-         .customerreviews li {
-           list-style: none;
-         }
-    
-         .customerreviews h3 {
-           font-size: 18px;
-           font-weight: 600;
-           line-height: px;
-           color: rgba(14, 14, 14, 1);
-           font-family: "Inter Tight", sans-serif;
-           margin-top: 24px;
-           margin-bottom: 8px;
-           text-transform: uppercase;
-         }
-    
-         .customerreviews p {
-           font-size: 14px;
-           font-weight: 500;
-           line-height: 1.4;
-           color: #858585;
-           font-family: "Inter Tight", sans-serif;
-           text-align: center;
-           margin-left: 7px;
-            margin-right: 7px;
-         }
+/*Baslik kismi Desktop formati */
+.reviews-header {
+  background-color: white;
+}
 
-         .customer1,.customer2,.customer3{
-          display: none;
-                  }
-    
-         .customercard,
-         .customercard2,
-         .customercard3 {
-           border: 1px solid #D4BFC4;
-           border-radius: 24px;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           padding: 20px 16px;
-         }
-    
-         
-    
-         .review-card {
-           /*Resimlerin ve cercevenin boyutlandirmasi*/
-           width: 56px;
-           height: 56px;
-           border-radius: 50%;
-           background-color: #E0E0E0;
-         }
-    
-         /* Responsive Design Ayarlari */
-         @media (max-width: 375px) {
-           .customer1 {
-             display: flex;
-           }
-         }
-    
-         @media (min-width: 376px) and (max-width: 768px) {
-    
-           .customer1,
-           .customer2 {
-             display: flex;
-           }
-    
-           .customerreviews {
-             display: flex;
-             gap: 24px;
-             margin-top: 52px;
-             padding-left: 32px;
-             padding-right: 32px;
-           }
-    
-           .reviews-header h2 {
-             font-size: 64px;
-             margin-top: 100px;
-             margin-left: 32px;
-             margin-right: 183px;
-    
-           }
-    
-           .reviews-header p {
-             font-size: 16px;
-             margin-top: 24px;
-             margin-left: 32px;
-             margin-right: 183px;
-    
-           }
-         }
-    
-         @media (min-width: 769px) {
-    
-           .customer1,
-           .customer2,
-           .customer3 {
-             display: flex;
-           }
-    
-           .customerreviews {
-             display: flex;
-             gap: 24px;
-             margin-top: 52px;
-             padding-left: 100px;
-             padding-right: 100px;
-           }
-    
-           .reviews-header h2 {
-             font-size: 64px;
-             margin-top: 100px;
-             margin-left: 100px;
-             margin-right: 627px;
-    
-           }
-    
-           .reviews-header p {
-             font-size: 16px;
-             margin-top: 24px;
-             margin-left: 100px;
-             margin-right: 627px;
-    
-           }
-         }
-    
-    
-    
-         /******************************************Mert Nukan************************************************ *'/
+.reviews-header h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.08;
+  color: rgba(14, 14, 14, 14);
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: 1.5;
+  text-transform: uppercase;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
+.reviews-header .h2baslik {
+  color: #576f35;
+}
+
+.reviews-header p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(14, 14, 14, 1);
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Reviews kartlari bolumu */
+.customerreviews {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 20px 16px;
+}
+
+.customerreviews li {
+  list-style: none;
+}
+
+.customerreviews h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: px;
+  color: rgba(14, 14, 14, 1);
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.customerreviews p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #858585;
+  font-family: "Inter Tight", sans-serif;
+  text-align: center;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.customer1,
+.customer2,
+.customer3 {
+  display: none;
+}
+
+.customercard,
+.customercard2,
+.customercard3 {
+  border: 1px solid #d4bfc4;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+.review-card {
+  /*Resimlerin ve cercevenin boyutlandirmasi*/
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+/* Responsive Design Ayarlari */
+@media (max-width: 375px) {
+  .customer1 {
+    display: flex;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .customer1,
+  .customer2 {
+    display: flex;
+  }
+
+  .customerreviews {
+    display: flex;
+    gap: 24px;
+    margin-top: 52px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .reviews-header h2 {
+    font-size: 64px;
+    margin-top: 100px;
+    margin-left: 32px;
+    margin-right: 183px;
+  }
+
+  .reviews-header p {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-left: 32px;
+    margin-right: 183px;
+  }
+}
+
+@media (min-width: 769px) {
+  .customer1,
+  .customer2,
+  .customer3 {
+    display: flex;
+  }
+
+  .customerreviews {
+    display: flex;
+    gap: 24px;
+    margin-top: 52px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .reviews-header h2 {
+    font-size: 64px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 627px;
+  }
+
+  .reviews-header p {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-left: 100px;
+    margin-right: 627px;
+  }
+}
+
+/******************************************Mert Nukan************************************************ *'/
+
+/* ************************************* Seher - advertisement *************************************** */
+
+.advertisement {
+  width: 100%;
+  background: #fbfbfb;
+}
+.advertisement .container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.advertisement-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -1.5%;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #141414;
+}
+.advertisement-color {
+  width: 335px;
+  height: 102px;
+  background: #576f35;
+  color: #fbfbfb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+/* ************************************* Seher bitti - advertisement *************************************** */
+
+/* ************************************* Seher - footer *************************************** */
+/* footer/Seher bitti-- >*/
+.footer-page {
+  width: 100%;
+  background: #7a3145;
+  height: auto;
+  /* LOGO ÜST BOŞLUĞU */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.footer-page .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 375px;
+  margin: 0 auto;
+}
+/* LOGO SATIRI */
+.footer-logo-text {
+  margin-bottom: 20px; /* logo satırı → paragraf arası */
+}
+.footer-a {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* logo + yazı arası */
+  text-decoration: none;
+}
+/*LOGO*/
+.footer-logo-svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+/* GREENHARVEST YAZISI */
+.footer-logo {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter Tight", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* PARAGRAF */
+.footer-logo-text + .text {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fbfbfb;
+  max-width: 339px;
+  margin-bottom: 40px;
+}
+/* MENU LINKS */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* MENU (How it works, Vegetables...) */
+.footer-link a {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Inter Tight", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* CONTACT INFO */
+address ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* telefon :arrow_up_down: adres arasında 14px */
+}
+.address-link {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  max-width: 180px; /* adresin 2 satır olması için */
+}
+/* POLICY SECTION */
+.footer-box-policy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 80px;
+}
+.footer-policy-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.policy {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ebdcdd;
+  text-decoration: none;
+}
