@@ -264,7 +264,7 @@ body {
   }
 }
 /*********************************************************************************************** Cem Header ****************************************************************************/
-/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+/**************************************\# Berat Çelik - HERO & HOW IT WORKS #/****************************************/
 * {
   box-sizing: border-box;
 }
@@ -309,8 +309,8 @@ body {
   font-family: "Inter Tight", sans-serif;
   font-weight: 600;
   font-size: 52px;
-  line-height: 100%;
-  letter-spacing: -0.01em;
+  line-height: 1;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: var(--white);
   margin: 0;
@@ -320,7 +320,7 @@ body {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.43;
   letter-spacing: 0;
   color: var(--white);
   padding: 20px 0px 40px 0px;
@@ -365,8 +365,8 @@ body {
   font-family: "Inter Tight", sans-serif;
   font-weight: 600;
   font-size: 28px;
-  line-height: 100%;
-  letter-spacing: -0.01em;
+  line-height: 1;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: var(--white);
   margin: 0;
@@ -381,7 +381,8 @@ body {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 143%;
+  line-height: 1.43;
+  letter-spacing: 0;
   color: var(--white);
   margin: 20px 0 0 0;
   padding: 0 0 40px 0;
@@ -427,7 +428,8 @@ body {
   color: var(--white);
   font-weight: 600;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.11;
+  letter-spacing: -0.015em;
 }
 
 .step-item:nth-child(2) {
@@ -446,7 +448,7 @@ body {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.43;
   letter-spacing: 0;
   color: var(--grey);
   margin: 0;
@@ -464,7 +466,7 @@ body {
   font-weight: 700;
   color: var(--black);
 }
-/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+/*************************************\# Berat Çelik - HERO & HOW IT WORKS 'END' #/***************************************/
 /************************************* your order 
 /* ************************************* oğulcan- your-order */
 * {
