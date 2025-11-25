@@ -1039,3 +1039,154 @@ font-weight: 500;
     
          /******************************************Mert Nukan************************************************ *'/
 
+/* ************************************* Seher - advertisement *************************************** */
+
+.section-advertisement {
+  background: #fbfbfb;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advertisement-container-two {
+  position: relative;
+}
+
+.advertisement-p > span {
+  color: #fbfbfb;
+}
+
+
+/* Settings for Desktop devices */
+
+@media screen and (min-width: 1280px) {
+  .background-advertisement-text {
+    height: 84px;
+    width: 808px;
+    top: -4px;
+    left: -16px;
+  }
+  .advertisement-p {
+    font-size: 76px;
+    max-width: 1070px;
+  }
+}
+
+/* ************************************* Seher bitti - advertisement *************************************** */
+
+/* ************************************* Seher - footer *************************************** */
+.footer {
+  background-color: #7a3145;
+}
+
+.footer-logo-svg {
+  fill: #fbfbfb;
+  width: 168px;
+  height: 16px;
+}
+
+.footer-p {
+  margin-top: 14px;
+  width: 335px;
+}
+
+.footer-list-items {
+  display: inline-grid;
+  gap: 14px;
+}
+
+.li-footer {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+
+.li-footer:hover {
+  color: #576f35;
+}
+
+
+.a-footer-add {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #fbfbfb;
+  font-style: normal;
+}
+
+.a-footer-add:hover {
+  color: #576f35;
+}
+
+.footer-privacy-ul {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-privacy-li {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #d4bfc4;
+}
+
+
+/* Settings for Desktop devices */
+
+@media screen and (min-width: 1280px) {
+  .footer-container {
+    max-width: 1280px;
+    padding: 52px 100px;
+  }
+
+  .footer-list {
+    display: flex;
+    gap: 250px;
+  }
+
+  .footer-list {
+    gap: 250px;
+  }
+
+  .footer-list-links {
+    width: 228px;
+    display: flex;
+    gap: 121px;
+    margin: 0px;
+  }
+
+  .footer-address-lists {
+    width: 216px;
+    margin: 0px;
+  }
+
+  .footer-privacy-ul {
+     margin-top: 124px;
+     width: 565px;
+     flex-direction: row;
+     gap: 686px;
+  }
+}
+/* ************************************* Seher bitti - footer *************************************** */
