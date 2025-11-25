@@ -1034,149 +1034,156 @@ font-weight: 500;
 
 /* ************************************* Seher - advertisement *************************************** */
 
-.section-advertisement {
+.advertisement {
+  width: 100%;
   background: #fbfbfb;
 }
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.advertisement .container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-.advertisement-container-two {
-  position: relative;
+.advertisement-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -1.5%;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #141414;
 }
-
-.advertisement-p > span {
+.advertisement-color {
+  width: 335px;
+  height: 102px;
+  background: #576f35;
   color: #fbfbfb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
-
-/* Settings for Desktop devices */
-
-@media screen and (min-width: 1280px) {
-  .background-advertisement-text {
-    height: 84px;
-    width: 808px;
-    top: -4px;
-    left: -16px;
-  }
-  .advertisement-p {
-    font-size: 76px;
-    max-width: 1070px;
-  }
-}
-
 /* ************************************* Seher bitti - advertisement *************************************** */
 
 /* ************************************* Seher - footer *************************************** */
-.footer {
-  background-color: #7a3145;
+/* footer/Seher bitti-- >*/
+.footer-page {
+  width: 100%;
+  background: #7a3145;
+  height: auto;
+  /* LOGO ÜST BOŞLUĞU */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 0;
+  padding-right: 0;
 }
-
-.footer-logo-svg {
-  fill: #fbfbfb;
-  width: 168px;
-  height: 16px;
+.footer-page .container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 375px;
+  margin: 0 auto;
 }
-
-.footer-p {
-  margin-top: 14px;
-  width: 335px;
+/* LOGO SATIRI */
+.footer-logo-text {
+  margin-bottom: 20px; /* logo satırı → paragraf arası */
 }
-
-.footer-list-items {
-  display: inline-grid;
-  gap: 14px;
-}
-
-.li-footer {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
-  color: #fbfbfb;
-  text-wrap: nowrap;
+.footer-a {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* logo + yazı arası */
   text-decoration: none;
 }
-
-.li-footer:hover {
-  color: #576f35;
+/*LOGO*/
+.footer-logo-svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
 }
-
-.a-footer-add {
+/* GREENHARVEST YAZISI */
+.footer-logo {
+  font-size: 14px;
+  font-weight: 500;
   font-family: "Inter Tight", sans-serif;
-  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+/* PARAGRAF */
+.footer-logo-text + .text {
+  font-family: "Inter Tight", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0px;
+  font-weight: 700;
   color: #fbfbfb;
-  font-style: normal;
+  max-width: 339px;
+  margin-bottom: 40px;
 }
-
-.a-footer-add:hover {
-  color: #576f35;
+/* MENU LINKS */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-
-.footer-privacy-ul {
+/* MENU (How it works, Vegetables...) */
+.footer-link a {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Inter Tight", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* CONTACT INFO */
+address ul {
+  padding: 0;
+  margin: 0;
   margin-top: 80px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* telefon :arrow_up_down: adres arasında 14px */
+}
+.address-link {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  max-width: 180px; /* adresin 2 satır olması için */
+}
+/* POLICY SECTION */
+.footer-box-policy {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-top: 80px;
 }
-
-.footer-privacy-li {
+.footer-policy-list {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.policy {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0px;
-  color: #d4bfc4;
+  font-weight: 500;
+  color: #ebdcdd;
+  text-decoration: none;
 }
-
-/* Settings for Desktop devices */
-
-@media screen and (min-width: 1280px) {
-  .footer-container {
-    max-width: 1280px;
-    padding: 52px 100px;
-  }
-
-  .footer-list {
-    display: flex;
-    gap: 250px;
-  }
-
-  .footer-list {
-    gap: 250px;
-  }
-
-  .footer-list-links {
-    width: 228px;
-    display: flex;
-    gap: 121px;
-    margin: 0px;
-  }
-
-  .footer-address-lists {
-    width: 216px;
-    margin: 0px;
-  }
-
-  .footer-privacy-ul {
-    margin-top: 124px;
-    width: 565px;
-    flex-direction: row;
-    gap: 686px;
-  }
-}
-/* ************************************* Seher bitti - footer *************************************** */
