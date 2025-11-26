@@ -1,274 +1,8 @@
-/******************************************************************************************Cem Header **************************************************************************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
-  font-family: "Inter", Arial, sans-serif;
-}
-/*/**/
-/* Desktop Header - 1280x52 */
-.header {
-  background: #5a7749;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 40px;
-  position: relative;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: -0.5px;
-}
-
-.logo-icon {
-  width: 24px;
-  height: 24px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-}
-
-.logo-icon span {
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  border-radius: 1px;
-}
-
-.nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-/* Desktop Menu Button States */
-.nav a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 8px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s;
-  background: transparent;
-}
-
-/* Desktop Hover State */
-.nav a:hover {
-  background: rgba(201, 163, 163, 0.3);
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
-/* Desktop Active State */
-.nav a:active {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Desktop Shop Button States */
-.nav a.shop-btn {
-  background: #8b1c42;
-  border-color: #8b1c42;
-}
-
-.nav a.shop-btn:hover {
-  background: #c9a3a3;
-  border-color: #c9a3a3;
-  color: #8b1c42;
-}
-
-.nav a.shop-btn:active {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
-  color: #8b1c42;
-}
-
-/* Checkbox hack for menu toggle */
-.menu-checkbox {
-  display: none;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 5px;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  transition: 0.3s;
-}
-
-/* Mobile Menu Overlay */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: #5a7749;
-  z-index: 1000;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  overflow: hidden;
-}
-
-.menu-checkbox:checked ~ .mobile-menu {
-  display: flex;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 40px;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-}
-
-/* Mobile/Tablet Menu Button States */
-.mobile-menu a {
-  color: #ffffff;
-  text-decoration: none;
-  padding: 12px 40px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  font-size: 16px;
-  font-weight: 500;
-  min-width: 200px;
-  text-align: center;
-  background: transparent;
-  transition: all 0.3s;
-}
-
-/* Mobile/Tablet Active State */
-.mobile-menu a:active {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Mobile/Tablet Shop Button States */
-.mobile-menu a.shop-btn {
-  background: #8b1c42;
-  border-color: #8b1c42;
-  margin-top: 20px;
-}
-
-.mobile-menu a.shop-btn:active {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(255, 255, 255, 0.9);
-  color: #8b1c42;
-}
-
-/* Tablet - 704x40 */
-@media (max-width: 1024px) {
-  .header {
-    height: 40px;
-    padding: 0 20px;
-  }
-
-  .logo {
-    font-size: 16px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  /* Tablet Menu - Sidebar Style (351x1020) */
-  .mobile-menu {
-    width: 351px;
-    left: auto;
-    right: 0;
-    background: linear-gradient(180deg, #4a5f3d 0%, #5a7749 50%, #6b8c5e 100%);
-    justify-content: flex-start;
-    padding-top: 80px;
-    gap: 15px;
-  }
-
-  .mobile-menu a {
-    min-width: 250px;
-  }
-
-  .close-btn {
-    top: 15px;
-    right: 15px;
-  }
-}
-
-/* Mobile - 335x32 */
-@media (max-width: 768px) {
-  .header {
-    height: 32px;
-    padding: 0 15px;
-  }
-
-  .logo {
-    font-size: 14px;
-  }
-
-  .logo-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .logo-icon span {
-    width: 5px;
-    height: 5px;
-  }
-
-  .menu-toggle span {
-    width: 20px;
-    height: 2px;
-  }
-
-  /* Mobile full screen menu */
-  .mobile-menu {
-    width: 100%;
-    right: 0;
-    background: #5a7749;
-  }
-}
-/*********************************************************************************************** Cem Header ****************************************************************************/
-/**************************************\# Berat Çelik - HERO & HOW IT WORKS #/****************************************/
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --black: #141414;
   --white: #fbfbfb;
@@ -282,9 +16,91 @@ body {
 }
 
 body {
-  margin: 0 auto;
-  padding: 0 auto;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #576f35;
 }
+.container {
+  width: 375px;
+  height: 100%;
+}
+/******************************************************************************************Cem Header **************************************************************************/
+
+/*/**/
+.header {
+  background: #576f35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin: 20px 0;
+  position: relative;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #576f35;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+.is-open {
+  display: flex;
+}
+.close-i {
+  margin: 20px 20px 0 auto;
+}
+.pages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 118px;
+  gap: 24px;
+}
+.nav-link {
+  width: 100%;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500;
+  color: #fbfbfb;
+  border: 1px solid #fbfbfb;
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 1.4287;
+  text-decoration: none;
+  padding: 12px 0px;
+  border-radius: 12px;
+  letter-spacing: 0;
+}
+.shop-btn {
+  margin-bottom: 52px;
+  padding: 16px 41px;
+  background-color: #7a3145;
+  border-radius: 30px;
+  color: #fbfbfb;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+
+  font-size: 18px;
+  letter-spacing: -0.015em;
+}
+.nav-link:active {
+  color: #7a3145;
+  background-color: #fbfbfb;
+}
+.nav-link:hover {
+  color: #7a3145;
+  background-color: #fbfbfb;
+}
+/*********************************************************************************************** Cem Header ****************************************************************************/
+/**************************************\# Berat Çelik - HERO & HOW IT WORKS #/****************************************/
 
 .hero {
   padding: 24px 0px 0px;
@@ -472,709 +288,626 @@ body {
 * {
   font-family: "Inter Tight", sans-serif;
 }
-@media (min-width: 320px) {
-  * {
-    margin: 0;
-  }
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    width: 100%;
-  }
-  .your-order {
-    background-color: #576f35;
-    height: 1536px;
-  }
-  .form-text {
-    background-color: #fbfbfb;
-    border-radius: 30px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .soc-networks {
-    background-color: #7a3145;
-    border-radius: 30px;
-    margin: 20px;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-  }
-  .Fresh-harvest {
-    padding: 80px 20px 0px 20px;
-    color: #fbfbfb;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 52px;
-    text-transform: uppercase;
-  }
-  .our-bowes {
-    padding: 20px 20px;
-    color: #fbfbfb;
-    font-size: 14px;
-    line-height: 20px;
-    vertical-align: middle;
-  }
-  .Ordering {
-    padding: 40px 20px 32px 20px;
-    text-align: start;
-    color: #141414;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 28px;
-    letter-spacing: -0.015em;
-    vertical-align: middle;
-    text-transform: uppercase;
-  }
-  .send-button {
-    padding: 12px 20px 40px 20px;
-    padding: 20px 20px 40px 20px;
-  }
-  .buton {
-    background-color: #7a3145;
-    color: #fbfbfb;
-    border-radius: 30px;
-    cursor: pointer;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    padding: 16px 129px;
-    justify-items: center;
-    font-size: 18px;
-  }
-  .inp::placeholder {
-    color: black;
-  }
-  .inp:focus {
-    border-color: brown;
-  }
-  .inp:not(:placeholder-shown):invalid {
-    border-color: red;
-  }
-  .inp:not(:placeholder-shown):valid {
-    border-color: green;
-  }
-  .text-valid,
-  .text-invalid {
-    font-size: 14px;
-    padding-left: 20px;
-    margin-top: 4px;
-    display: none;
-  }
-  .inp-wrp {
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .inp {
-    border-radius: 30px;
-    margin: 8px;
-    width: 279px;
-    padding: 0px 16px;
-    width: 295px;
-    height: 48px;
-    border: 1px solid gray;
-    border-radius: 30px;
-    outline: none;
-    font-size: 14px;
-  }
-  .text-valid {
-    color: green;
-  }
-  .text-invalid {
-    color: red;
-  }
-  .inp:not(:placeholder-shown):valid ~ .text-valid {
-    display: block;
-  }
-  .inp:not(:placeholder-shown):invalid ~ .text-invalid {
-    display: block;
-  }
-  .inputlar {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    gap: 16px;
-  }
-
-  .yorum {
-    border-radius: 15px;
-    height: 92px;
-    display: flex;
-    border: 1px solid #858585;
-    outline: none;
-    padding: 16px;
-    font-size: 14px;
-    line-height: 20px;
-    max-width: 295px;
-  }
-  .yorum::placeholder {
-    color: #141414;
-  }
-  .renk-1 {
-    color: #d4bfc4;
-  }
-  .renk-2 {
-    color: #7a3145;
-  }
-  .renk-3 {
-    color: #576f35;
-  }
-  .follow-us {
-    padding: 20px 0px 0px 0px;
-    color: #d4bfc4;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0;
-    vertical-align: middle;
-    font-weight: bold;
-    margin-bottom: 16px;
-    display: flex;
-    justify-content: center;
-    margin-right: 80px;
-  }
-  .limon {
-    align-items: center;
-    border-radius: 15px;
-  }
-  .social-media {
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
-    text-transform: uppercase;
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .social {
-    color: #fbfbfb;
-    text-decoration: none;
-  }
-
-  /* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
-  /**/
-  /**/
-  /**/
-  /***************************************************Mert köroğlu**************************************************/
-  /* MOBILE-FIRST (375px tasarımı) */
-
-  /* 🍇 SECTİON: Bölümün tamamını 375px ile sınırlar ve ortalar */
-  .vegetable-section {
-    background-color: rgba(122, 49, 69, 1);
-    /* KRİTİK DÜZELTME: Tüm section'ı 375px'te tutmak ve tarayıcıda ortalamak */
-    width: 100%;
-    max-width: 375px;
-    margin: 0 auto;
-  }
-
-  /* 🍎 CONTAINER: Kenarlarda 20px padding bırakarak içeriği yönetir */
-  .vegetable-section .veg-container {
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px; /* Bölümler arası boşluk */
-    box-sizing: border-box;
-    margin: 0 auto;
-    /* DÜZELTME: 100% genişlik, padding ile birlikte 375px'i korur (Taşmayı önler) */
-    width: 100%;
-  }
-
-  /* 🥦 INTRO BAŞLIK (ORGANIC VEGETABLES) */
-  .vegetable-section .intro h2 {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600; /* SemiBold */
-    font-size: 48px;
-    line-height: 1.0833; /* 52px */
-    letter-spacing: -0.42px;
-    text-transform: uppercase;
-    margin: 0;
-    color: #fbfbfb; /* Beyaz */
-
-    /* DÜZELTME 1: Başlık altındaki boşluk 20px olarak güncellendi */
-    margin-bottom: 20px;
-  }
-
-  /* 🍠 INTRO BAŞLIK - VEGETABLES kısmı */
-  .vegetable-section .intro .veg-baslik {
-    display: block;
-    color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
-  }
-
-  /* 🥕 INTRO PARAGRAF */
-  .vegetable-section .intro p {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 500; /* Medium */
-    font-size: 14px;
-    line-height: 1.4286; /* 20px */
-    letter-spacing: 0%;
-    /* DÜZELTME: Üstteki 12px boşluk h2'den geldiği için margin-top sıfırlanır */
-    margin: 0;
-    color: #fbfbfb; /* Beyaz */
-  }
-
-  /* 🍆 ÜRÜN KARTI BAŞLIĞI (EGGPLANT, LEEK vb.) */
-  .vegetable-section .veg-title-product {
-    color: rgba(122, 49, 69, 1); /* Koyu Kırmızı/Mor */
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-    line-height: 1;
-    letter-spacing: -0.42px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  /* 💰 ÜRÜN KARTLARI FİYAT METNİ */
-  .vegetable-section .product-card .price {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 500; /* Medium */
-    font-size: 14px;
-    line-height: 1.4286; /* 20px */
-    letter-spacing: 0%;
-    /* DÜZELTME: Marjinler sıfırlanır */
-    margin: 0;
-    color: rgba(20, 20, 20, 1); /* Koyu Gri/Siyah */
-    padding-top: 12px; /* REVIZYON 2 h3 margin bottom 12px yerine p'ye alt ve üstten 12px padding verildi */
-    padding-bottom: 12px;
-  }
-
-  /* 🖼️ ÜRÜN KARTLARI: BEYAZ KUTULAR */
-  .vegetable-section .product-card {
-    background-color: white;
-    border-radius: 40px;
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0;
-    /* DÜZELTME: İçerik tam genişlikte olmalı (335px) */
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0;
-
-    /* KRİTİK: YÜKSEKLİK VE KONUMLANDIRMA */
-    position: relative;
-    height: 384px;
-    overflow: hidden;
-  }
-
-  /* 🖼️ ÜRÜN GÖRSELLERİ: KARTIN ALTINA HİZALAMA */
-  .vegetable-section .product-image {
-    width: 280px;
-    height: 240px;
-    display: block;
-
-    /* KRİTİK: Mutlak Konumlandırma */
-    position: absolute;
-    bottom: 32px; /* Kartın altından 32px yukarıda */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  /* 📜 ÜRÜN LİSTESİ DÜZENİ */
-  .vegetable-section .products-grid {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Kartlar arası 20px boşluk */
-  }
-
-  /******************************************Mert köroğlu************************************************ *'/
-.discount {
-text-align: left;
-font-size: 64px;
-padding: 100px;
-text-transform: uppercase;
+.your-order {
+  background-color: #576f35;
+  height: 1536px;
 }
-/* Discount up to 40%!  *'/
-.discount-highlight {
-background: #576f35;
-color: #fbfbfb;
-padding: 0 6px;
-}
-
-
-/* footer Desktop  *'/
-/* class  *'/
-.foot-main {
+.form-text {
+  background-color: #fbfbfb;
+  border-radius: 30px;
+  margin: 20px;
+  padding: 40px 20px;
   display: flex;
-  padding: 52px 100px 124px;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
-/* logo  *'/
-.foot-logo {
-  width: 265px;
-  margin-right: 250px;
+.soc-networks {
+  background-color: #7a3145;
+  border-radius: 30px;
+  margin: 20px;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.Fresh-harvest {
+  padding: 80px 20px 0px 20px;
   color: #fbfbfb;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
 }
-/* logo altı yazı  *'/
-.foot-logo p {
-margin-top: 24px;
-font-weight: 500;
+.our-bowes {
+  padding: 20px 20px;
+  color: #fbfbfb;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
 }
-/* how it works, vegetables,rewiew *'/
-.foot-links {
-display: flex;
-flex-direction: column;
-gap: 24px;
-margin-right: 121px;
+.Ordering {
+  text-align: start;
+  color: #141414;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 28px;
+  letter-spacing: -0.015em;
+  vertical-align: middle;
+  text-transform: uppercase;
 }
-/* how it works, vegetables,rewiew yazı  *'/
-.foot-links a {
-color: #fbfbfb;
-font-size: 28px;
-text-transform: uppercase;
-font-weight: 600;
+.buton {
+  background-color: #7a3145;
+  color: #fbfbfb;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 129px;
+  justify-items: center;
+  font-size: 18px;
 }
-/* telefon ve adres  *'/
-.foot-contact {
-color: #fbfbfb;
-font-style: normal;
-font-weight: 700;
-width: 216px;
+.inp::placeholder {
+  color: black;
 }
-/* privacy policy, cookie setting, green harvest   *'/
-.foot-end {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 100px 52px;
-color: #d4bfc4;
+.inp:focus {
+  border-color: brown;
 }
-/* privacy policy, cookie setting  *'/
-/* sıralı alt alta  *'/
-.foot-end ul {
-display: flex;
-gap: 12px;
+.inp:not(:placeholder-shown):invalid {
+  border-color: red;
 }
-/* green harvest  *'/
-.foot-end p {
-color: #d4bfc4;
-font-weight: 500;
-}*/
+.inp:not(:placeholder-shown):valid {
+  border-color: green;
+}
+.text-valid,
+.text-invalid {
+  font-size: 14px;
+  padding-left: 20px;
+  margin-top: 4px;
+  display: none;
+}
+.inp-wrp {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
 
-  /*------------Mert Nukan reviews---------*/
+.inp {
+  border-radius: 30px;
+  width: 279px;
+  padding: 0px 16px;
+  width: 295px;
+  height: 48px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  outline: none;
+  font-size: 14px;
+}
+.text-valid {
+  color: green;
+}
+.text-invalid {
+  color: red;
+}
+.inp:not(:placeholder-shown):valid ~ .text-valid {
+  display: block;
+}
+.inp:not(:placeholder-shown):invalid ~ .text-invalid {
+  display: block;
+}
+.inputlar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 0 20px 0;
+}
 
-  /* Reviews from our customers bolumu */
-  .customer-reviews-section {
-    margin-top: 100px;
-    background-color: white;
-    margin-bottom: 80px;
+.yorum {
+  border-radius: 15px;
+  height: 92px;
+  display: flex;
+  border: 1px solid #858585;
+  outline: none;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 295px;
+}
+.yorum::placeholder {
+  color: #141414;
+}
+.renk-1 {
+  color: #d4bfc4;
+}
+.renk-2 {
+  color: #7a3145;
+}
+.renk-3 {
+  color: #576f35;
+}
+.follow-us {
+  padding: 20px 0px 0px 0px;
+  color: #d4bfc4;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  font-weight: bold;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  margin-right: 80px;
+}
+.limon {
+  align-items: center;
+  border-radius: 15px;
+}
+.social-media {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.social {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
+/**/
+/**/
+/**/
+/***************************************************Mert köroğlu**************************************************/
+/* MOBILE-FIRST (375px tasarımı) */
+
+/* 🍇 SECTİON: Bölümün tamamını 375px ile sınırlar ve ortalar */
+.vegetable-section {
+  background-color: rgba(122, 49, 69, 1);
+  /* KRİTİK DÜZELTME: Tüm section'ı 375px'te tutmak ve tarayıcıda ortalamak */
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+/* 🍎 CONTAINER: Kenarlarda 20px padding bırakarak içeriği yönetir */
+.vegetable-section .veg-container {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Bölümler arası boşluk */
+  box-sizing: border-box;
+  margin: 0 auto;
+  /* DÜZELTME: 100% genişlik, padding ile birlikte 375px'i korur (Taşmayı önler) */
+  width: 100%;
+}
+
+/* 🥦 INTRO BAŞLIK (ORGANIC VEGETABLES) */
+.vegetable-section .intro h2 {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 48px;
+  line-height: 1.0833; /* 52px */
+  letter-spacing: -0.42px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #fbfbfb; /* Beyaz */
+
+  /* DÜZELTME 1: Başlık altındaki boşluk 20px olarak güncellendi */
+  margin-bottom: 20px;
+}
+
+/* 🍠 INTRO BAŞLIK - VEGETABLES kısmı */
+.vegetable-section .intro .veg-baslik {
+  display: block;
+  color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
+}
+
+/* 🥕 INTRO PARAGRAF */
+.vegetable-section .intro p {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 14px;
+  line-height: 1.4286; /* 20px */
+  letter-spacing: 0%;
+  /* DÜZELTME: Üstteki 12px boşluk h2'den geldiği için margin-top sıfırlanır */
+  margin: 0;
+  color: #fbfbfb; /* Beyaz */
+}
+
+/* 🍆 ÜRÜN KARTI BAŞLIĞI (EGGPLANT, LEEK vb.) */
+.vegetable-section .veg-title-product {
+  color: rgba(122, 49, 69, 1); /* Koyu Kırmızı/Mor */
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.42px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 💰 ÜRÜN KARTLARI FİYAT METNİ */
+.vegetable-section .product-card .price {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 14px;
+  line-height: 1.4286; /* 20px */
+  letter-spacing: 0%;
+  /* DÜZELTME: Marjinler sıfırlanır */
+  margin: 0;
+  color: rgba(20, 20, 20, 1); /* Koyu Gri/Siyah */
+  padding-top: 12px; /* REVIZYON 2 h3 margin bottom 12px yerine p'ye alt ve üstten 12px padding verildi */
+  padding-bottom: 12px;
+}
+
+/* 🖼️ ÜRÜN KARTLARI: BEYAZ KUTULAR */
+.vegetable-section .product-card {
+  background-color: white;
+  border-radius: 40px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+
+  /* KRİTİK: YÜKSEKLİK VE KONUMLANDIRMA */
+  position: relative;
+  height: 384px;
+  overflow: hidden;
+}
+
+/* 🖼️ ÜRÜN GÖRSELLERİ: KARTIN ALTINA HİZALAMA */
+.vegetable-section .product-image {
+  width: 280px;
+  height: 240px;
+  display: block;
+
+  /* KRİTİK: Mutlak Konumlandırma */
+  position: absolute;
+  bottom: 32px; /* Kartın altından 32px yukarıda */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* 📜 ÜRÜN LİSTESİ DÜZENİ */
+.vegetable-section .products-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Kartlar arası 20px boşluk */
+}
+
+/*------------Mert Nukan reviews---------*/
+
+/* Reviews from our customers bolumu */
+#rewiew {
+  background-color: #fbfbfb;
+  padding: 80px 20px;
+}
+.customer-reviews-section {
+  background-color: white;
+}
+
+/*Baslik kismi Desktop formati */
+.reviews-header {
+  background-color: white;
+}
+
+.reviews-header h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.08;
+  color: rgba(14, 14, 14, 14);
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: 1.5;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.reviews-header .h2baslik {
+  color: #576f35;
+}
+
+.reviews-header p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(14, 14, 14, 1);
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Reviews kartlari bolumu */
+.customerreviews {
+  margin-top: 40px;
+  padding: 20px 16px;
+}
+
+.customerreviews li {
+  list-style: none;
+}
+
+.customerreviews h3 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: px;
+  color: rgba(14, 14, 14, 1);
+  font-family: "Inter Tight", sans-serif;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.customerreviews p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #858585;
+  font-family: "Inter Tight", sans-serif;
+  text-align: center;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.customer1,
+.customer2,
+.customer3 {
+  display: none;
+}
+
+.customercard,
+.customercard2,
+.customercard3 {
+  border: 1px solid #d4bfc4;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+.review-card {
+  /*Resimlerin ve cercevenin boyutlandirmasi*/
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+
+/* Responsive Design Ayarlari */
+@media (max-width: 375px) {
+  .customer1 {
+    display: flex;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .customer1,
+  .customer2 {
+    display: flex;
   }
 
-  /*Baslik kismi Desktop formati */
-  .reviews-header {
-    background-color: white;
+  .customerreviews {
+    display: flex;
+    gap: 24px;
+    margin-top: 52px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .reviews-header h2 {
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1.08;
-    color: rgba(14, 14, 14, 14);
-    font-family: "Inter Tight", sans-serif;
-    letter-spacing: 1.5;
-    text-transform: uppercase;
-    margin-top: 80px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .reviews-header .h2baslik {
-    color: #576f35;
+    font-size: 64px;
+    margin-top: 100px;
+    margin-left: 32px;
+    margin-right: 183px;
   }
 
   .reviews-header p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgba(14, 14, 14, 1);
-    font-family: "Inter Tight", sans-serif;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  /* Reviews kartlari bolumu */
-  .customerreviews {
-    margin-top: 40px;
-    margin-bottom: 60px;
-    padding: 20px 16px;
-  }
-
-  .customerreviews li {
-    list-style: none;
-  }
-
-  .customerreviews h3 {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: px;
-    color: rgba(14, 14, 14, 1);
-    font-family: "Inter Tight", sans-serif;
+    font-size: 16px;
     margin-top: 24px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+    margin-left: 32px;
+    margin-right: 183px;
   }
+}
 
-  .customerreviews p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.4;
-    color: #858585;
-    font-family: "Inter Tight", sans-serif;
-    text-align: center;
-    margin-left: 7px;
-    margin-right: 7px;
-  }
-
+@media (min-width: 769px) {
   .customer1,
   .customer2,
   .customer3 {
-    display: none;
-  }
-
-  .customercard,
-  .customercard2,
-  .customercard3 {
-    border: 1px solid #d4bfc4;
-    border-radius: 24px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 16px;
   }
 
-  .review-card {
-    /*Resimlerin ve cercevenin boyutlandirmasi*/
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
+  .customerreviews {
+    display: flex;
+    gap: 24px;
+    margin-top: 52px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
-  /* Responsive Design Ayarlari */
-  @media (max-width: 375px) {
-    .customer1 {
-      display: flex;
-    }
+  .reviews-header h2 {
+    font-size: 64px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 627px;
   }
 
-  @media (min-width: 376px) and (max-width: 768px) {
-    .customer1,
-    .customer2 {
-      display: flex;
-    }
-
-    .customerreviews {
-      display: flex;
-      gap: 24px;
-      margin-top: 52px;
-      padding-left: 32px;
-      padding-right: 32px;
-    }
-
-    .reviews-header h2 {
-      font-size: 64px;
-      margin-top: 100px;
-      margin-left: 32px;
-      margin-right: 183px;
-    }
-
-    .reviews-header p {
-      font-size: 16px;
-      margin-top: 24px;
-      margin-left: 32px;
-      margin-right: 183px;
-    }
+  .reviews-header p {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-left: 100px;
+    margin-right: 627px;
   }
+}
 
-  @media (min-width: 769px) {
-    .customer1,
-    .customer2,
-    .customer3 {
-      display: flex;
-    }
-
-    .customerreviews {
-      display: flex;
-      gap: 24px;
-      margin-top: 52px;
-      padding-left: 100px;
-      padding-right: 100px;
-    }
-
-    .reviews-header h2 {
-      font-size: 64px;
-      margin-top: 100px;
-      margin-left: 100px;
-      margin-right: 627px;
-    }
-
-    .reviews-header p {
-      font-size: 16px;
-      margin-top: 24px;
-      margin-left: 100px;
-      margin-right: 627px;
-    }
-  }
-
-  /******************************************Mert Nukan************************************************ *'/
+/******************************************Mert Nukan************************************************ *'/
 
 /* ************************************* Seher - advertisement *************************************** */
 
-  .advertisement {
-    width: 100%;
-    background: #fbfbfb;
-  }
-  .advertisement .container {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .advertisement-text {
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 52px;
-    letter-spacing: -1.5%;
-    text-transform: uppercase;
-    vertical-align: middle;
-    color: #141414;
-  }
-  .advertisement-color {
-    width: 335px;
-    height: 102px;
-    background: #576f35;
-    color: #fbfbfb;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    font-size: 48px;
-    line-height: 52px;
-    letter-spacing: -0.015em;
-    text-transform: uppercase;
-    box-sizing: border-box;
-  }
-  /* ************************************* Seher bitti - advertisement *************************************** */
+.advertisement {
+  width: 100%;
+  background: #fbfbfb;
+}
+.advertisement .container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.advertisement-text {
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -1.5%;
+  text-transform: uppercase;
+  vertical-align: middle;
+  color: #141414;
+}
+.advertisement-color {
+  width: 335px;
+  height: 102px;
+  background: #576f35;
+  color: #fbfbfb;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+/* ************************************* Seher bitti - advertisement *************************************** */
 
-  /* ************************************* Seher - footer *************************************** */
-  .footer-page {
-    width: 100%;
-    background: #7a3145;
-    height: auto;
-    /* LOGO ÜST BOŞLUĞU */
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 0;
-    padding-right: 0;
+/* ************************************* Seher - footer *************************************** */
+.footer-page {
+  width: 100%;
+  background: #7a3145;
+  height: auto;
+  /* LOGO ÜST BOŞLUĞU */
+  padding: 40px 20px;
+}
+
+/* LOGO SATIRI */
+.footer-logo-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+address {
+  font-style: normal;
+}
+/* PARAGRAF */
+.footer-logo-text + .text {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #fbfbfb;
+  max-width: 339px;
+  margin-bottom: 40px;
+}
+/* MENU LINKS */
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* MENU (How it works, Vegetables...) */
+.footer-link a {
+  font-size: 28px;
+  font-weight: 600;
+  font-family: "Inter Tight", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* CONTACT INFO */
+address ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.address-link {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  max-width: 180px;
+}
+/* POLICY SECTION */
+.footer-box-policy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 80px;
+}
+.footer-policy-list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.policy {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #d4bfc4;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
   }
-  .footer-page .container {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 375px;
+}
+@media (min-width: 1280px) {
+  .container {
+    width: 1280px;
     margin: 0 auto;
-  }
-  /* LOGO SATIRI */
-  .footer-logo-text {
-    margin-bottom: 20px;
-  }
-  /* LOGO */
-  .footer-logo-svg {
-    display: block;
-    width: 168px;
-    height: 16px;
-    fill: #ffffff;
-  }
-  /* PARAGRAF */
-  .footer-logo-text + .text {
-    font-family: "Inter Tight", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #fbfbfb;
-    max-width: 339px;
-    margin-bottom: 40px;
-  }
-  /* MENU LINKS */
-  .footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  /* MENU (How it works, Vegetables...) */
-  .footer-link a {
-    font-size: 28px;
-    font-weight: 600;
-    font-family: "Inter Tight", sans-serif;
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  /* CONTACT INFO */
-  address ul {
-    padding: 0;
-    margin: 0;
-    margin-top: 40px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .address-link {
-    font-family: "Inter Tight", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    max-width: 180px;
-  }
-  /* POLICY SECTION */
-  .footer-box-policy {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 80px;
-  }
-  .footer-policy-list {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  .policy {
-    font-family: "Inter Tight", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
-    color: #ebdcdd;
-    text-decoration: none;
-    opacity: 50%;
   }
 }
