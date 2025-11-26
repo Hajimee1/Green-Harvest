@@ -1068,7 +1068,6 @@ font-weight: 500;
     border-radius: 12px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
     font-size: 48px;
@@ -1080,7 +1079,6 @@ font-weight: 500;
   /* ************************************* Seher bitti - advertisement *************************************** */
 
   /* ************************************* Seher - footer *************************************** */
-  /* footer/Seher bitti-- >*/
   .footer-page {
     width: 100%;
     background: #7a3145;
@@ -1099,34 +1097,21 @@ font-weight: 500;
   }
   /* LOGO SATIRI */
   .footer-logo-text {
-    margin-bottom: 20px; /* logo satırı → paragraf arası */
+    margin-bottom: 20px;
   }
-  .footer-a {
-    display: flex;
-    align-items: center;
-    gap: 16px; /* logo + yazı arası */
-    text-decoration: none;
-  }
-  /*LOGO*/
+  /* LOGO */
   .footer-logo-svg {
-    width: 16px;
+    display: block;
+    width: 168px;
     height: 16px;
     fill: #ffffff;
-  }
-  /* GREENHARVEST YAZISI */
-  .footer-logo {
-    font-size: 14px;
-    font-weight: 500;
-    font-family: "Inter Tight", sans-serif;
-    color: #ffffff;
-    text-transform: uppercase;
   }
   /* PARAGRAF */
   .footer-logo-text + .text {
     font-family: "Inter Tight", sans-serif;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: #fbfbfb;
     max-width: 339px;
     margin-bottom: 40px;
@@ -1153,32 +1138,32 @@ font-weight: 500;
   address ul {
     padding: 0;
     margin: 0;
-    margin-top: 80px;
+    margin-top: 40px;
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 14px; /* telefon :arrow_up_down: adres arasında 14px */
+    gap: 14px;
   }
   .address-link {
     font-family: "Inter Tight", sans-serif;
     font-size: 14px;
     line-height: 20px;
-    font-weight: 700;
+    font-weight: 500;
     color: #ffffff;
     text-decoration: none;
-    max-width: 180px; /* adresin 2 satır olması için */
+    max-width: 180px;
   }
   /* POLICY SECTION */
   .footer-box-policy {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     margin-top: 80px;
   }
   .footer-policy-list {
     display: flex;
     flex-direction: row;
-    gap: 12px;
+    gap: 8px;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -1190,5 +1175,6 @@ font-weight: 500;
     font-weight: 500;
     color: #ebdcdd;
     text-decoration: none;
+    opacity: 50%;
   }
 }
