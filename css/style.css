@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 :root {
   --black: #141414;
@@ -14,7 +15,10 @@
   --greenlight: #3cbc81;
   --smthwrong: #e74a3b;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: "Inter", Arial, sans-serif;
   background-color: #576f35;
@@ -23,18 +27,23 @@ body {
   width: 375px;
   height: 100%;
 }
+.flex {
+  display: flex;
+}
+.align-text {
+  align-items: center;
+}
 /******************************************************************************************Cem Header **************************************************************************/
 
 /*/**/
 .header {
   background: #576f35;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 0 20px;
   margin: 20px 0;
   position: relative;
 }
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -42,10 +51,10 @@ body {
   background-color: #576f35;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+}
+nav {
   display: none;
 }
 .is-open {
@@ -55,10 +64,8 @@ body {
   margin: 20px 20px 0 auto;
 }
 .pages {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center;
   width: 118px;
   gap: 24px;
@@ -70,12 +77,9 @@ body {
   color: #fbfbfb;
   border: 1px solid #fbfbfb;
   background-color: transparent;
-  font-size: 14px;
-  line-height: 1.4287;
   text-decoration: none;
   padding: 12px 0px;
   border-radius: 12px;
-  letter-spacing: 0;
 }
 .shop-btn {
   margin-bottom: 52px;
@@ -84,12 +88,8 @@ body {
   border-radius: 30px;
   color: #fbfbfb;
   border: none;
-  text-transform: uppercase;
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
-
   font-size: 18px;
-  letter-spacing: -0.015em;
 }
 .nav-link:active {
   color: #7a3145;
@@ -99,45 +99,20 @@ body {
   color: #7a3145;
   background-color: #fbfbfb;
 }
-/*********************************************************************************************** Cem Header ****************************************************************************/
-/**************************************\# Berat Çelik - HERO & HOW IT WORKS #/****************************************/
-
 .hero {
-  padding: 24px 0px 0px;
-  width: 100%;
-  min-height: 760px;
-  background-color: var(--green);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-section {
-  width: 100%;
-  max-width: 375px;
-  padding: 0 20px;
-  height: auto;
-  margin: 0 auto;
+  padding: 24px 20px 0px;
 }
 
 .hero-section h1 {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
   font-size: 52px;
   line-height: 1;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
   color: var(--white);
-  margin: 0;
 }
 
 .hero-section p {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: 0;
   color: var(--white);
   padding: 20px 0px 40px 0px;
   margin: 0;
@@ -150,76 +125,46 @@ body {
   background-position: cover;
 }
 
-.how_it_works {
-  width: 100%;
-  height: auto;
-}
-
 .how_it_works_image {
-  width: 100%;
   background-color: var(--chianti);
   padding: 40px 20px;
 }
 
 .how_it_works_image img {
   border-radius: 30px;
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 .how_it_works_text {
   width: 100%;
   height: auto;
   background-color: var(--green);
-  padding: 80px 20px;
-  display: flex;
   flex-direction: column;
 }
-
 .how_it_works_text h2 {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
   color: var(--white);
-  margin: 0;
 }
-
 .how_it_works .vegetable,
 .easy-steps {
   color: var(--blush);
 }
-
 .how_it_works_text > p {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: 0;
   color: var(--white);
-  margin: 20px 0 0 0;
-  padding: 0 0 40px 0;
 }
-
 .step-list {
   text-decoration: none;
-  padding: 0;
-  margin: 0;
   list-style: none;
-  display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
 .step-item {
   width: 100%;
   border-radius: 15px;
-  display: flex;
   background-color: var(--white);
-  align-items: center;
 }
 
 .ellipse {
@@ -228,7 +173,6 @@ body {
   border: 5px solid #d4bfc4;
   border-radius: 100%;
   background-color: #7a3145;
-  display: flex;
   position: relative;
   flex-shrink: 0;
   margin-right: 24px;
@@ -263,12 +207,9 @@ body {
 .step-item > p {
   font-family: "Inter Tight", sans-serif;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: 0;
   color: var(--grey);
   margin: 0;
-  padding: 0 24px 0 0;
+  padding: 0 27px 0 0;
 }
 
 .step-list .step-item:nth-child(2) > p {
@@ -282,63 +223,40 @@ body {
   font-weight: 700;
   color: var(--black);
 }
-/*************************************\# Berat Çelik - HERO & HOW IT WORKS 'END' #/***************************************/
-/************************************* your order 
-/* ************************************* oğulcan- your-order */
-* {
-  font-family: "Inter Tight", sans-serif;
-}
-
 .your-order {
   background-color: #576f35;
-  height: 1536px;
 }
 .form-text {
   background-color: #fbfbfb;
   border-radius: 30px;
-  margin: 20px;
   padding: 40px 20px;
-  display: flex;
   flex-direction: column;
   justify-items: center;
-  align-items: center;
   justify-content: center;
 }
 .soc-networks {
   background-color: #7a3145;
   border-radius: 30px;
-  margin: 20px;
+  margin-top: 20px;
   justify-items: center;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 40px 20px;
 }
 .Fresh-harvest {
-  padding: 80px 20px 0px 20px;
   color: #fbfbfb;
-  font-weight: 600;
   font-size: 48px;
   line-height: 52px;
-  text-transform: uppercase;
 }
 .our-bowes {
-  padding: 20px 20px;
   color: #fbfbfb;
-  font-size: 14px;
-  line-height: 20px;
-  vertical-align: middle;
 }
 .Ordering {
   text-align: start;
   color: #141414;
-  font-weight: 600;
   font-size: 28px;
-  line-height: 28px;
-  letter-spacing: -0.015em;
+  line-height: 1;
   vertical-align: middle;
-  text-transform: uppercase;
 }
 .buton {
   background-color: #7a3145;
@@ -346,7 +264,6 @@ body {
   border-radius: 30px;
   cursor: pointer;
   border: none;
-  display: flex;
   flex-direction: column;
   padding: 16px 129px;
   justify-items: center;
@@ -366,17 +283,10 @@ body {
 }
 .text-valid,
 .text-invalid {
-  font-size: 14px;
   padding-left: 20px;
   margin-top: 4px;
   display: none;
 }
-.inp-wrp {
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-}
-
 .inp {
   border-radius: 30px;
   width: 279px;
@@ -386,7 +296,6 @@ body {
   border: 1px solid gray;
   border-radius: 30px;
   outline: none;
-  font-size: 14px;
 }
 .text-valid {
   color: green;
@@ -401,7 +310,6 @@ body {
   display: block;
 }
 .inputlar {
-  display: flex;
   flex-direction: column;
   gap: 16px;
   padding: 40px 0 20px 0;
@@ -410,12 +318,9 @@ body {
 .yorum {
   border-radius: 15px;
   height: 92px;
-  display: flex;
   border: 1px solid #858585;
   outline: none;
   padding: 16px;
-  font-size: 14px;
-  line-height: 20px;
   max-width: 295px;
 }
 .yorum::placeholder {
@@ -433,13 +338,9 @@ body {
 .follow-us {
   padding: 20px 0px 0px 0px;
   color: #d4bfc4;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0;
   vertical-align: middle;
   font-weight: bold;
   margin-bottom: 16px;
-  display: flex;
   justify-content: center;
   margin-right: 80px;
 }
@@ -449,13 +350,9 @@ body {
 }
 .social-media {
   color: white;
-  font-weight: 600;
   font-size: 18px;
   line-height: 20px;
-  text-transform: uppercase;
   list-style: none;
-  text-decoration: none;
-  display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
@@ -463,235 +360,123 @@ body {
   color: #fbfbfb;
   text-decoration: none;
 }
-
-/* ************************************* Berat Çelik - HERO & HOW IT WORKS *************************************** */
-/**/
-/**/
-/**/
-/***************************************************Mert köroğlu**************************************************/
-/* MOBILE-FIRST (375px tasarımı) */
-
-/* 🍇 SECTİON: Bölümün tamamını 375px ile sınırlar ve ortalar */
 .vegetable-section {
   background-color: rgba(122, 49, 69, 1);
-  /* KRİTİK DÜZELTME: Tüm section'ı 375px'te tutmak ve tarayıcıda ortalamak */
-  width: 100%;
-  max-width: 375px;
-  margin: 0 auto;
 }
-
-/* 🍎 CONTAINER: Kenarlarda 20px padding bırakarak içeriği yönetir */
-.vegetable-section .veg-container {
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Bölümler arası boşluk */
-  box-sizing: border-box;
-  margin: 0 auto;
-  /* DÜZELTME: 100% genişlik, padding ile birlikte 375px'i korur (Taşmayı önler) */
-  width: 100%;
-}
-
-/* 🥦 INTRO BAŞLIK (ORGANIC VEGETABLES) */
 .vegetable-section .intro h2 {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600; /* SemiBold */
   font-size: 48px;
-  line-height: 1.0833; /* 52px */
-  letter-spacing: -0.42px;
-  text-transform: uppercase;
-  margin: 0;
-  color: #fbfbfb; /* Beyaz */
-
-  /* DÜZELTME 1: Başlık altındaki boşluk 20px olarak güncellendi */
-  margin-bottom: 20px;
+  line-height: 1.0833;
+  color: #fbfbfb;
 }
-
-/* 🍠 INTRO BAŞLIK - VEGETABLES kısmı */
 .vegetable-section .intro .veg-baslik {
   display: block;
   color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
 }
-
-/* 🥕 INTRO PARAGRAF */
 .vegetable-section .intro p {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 500; /* Medium */
-  font-size: 14px;
-  line-height: 1.4286; /* 20px */
-  letter-spacing: 0%;
-  /* DÜZELTME: Üstteki 12px boşluk h2'den geldiği için margin-top sıfırlanır */
-  margin: 0;
-  color: #fbfbfb; /* Beyaz */
+  font-weight: 500;
+  color: #fbfbfb;
 }
-
-/* 🍆 ÜRÜN KARTI BAŞLIĞI (EGGPLANT, LEEK vb.) */
 .vegetable-section .veg-title-product {
-  color: rgba(122, 49, 69, 1); /* Koyu Kırmızı/Mor */
+  color: rgba(122, 49, 69, 1);
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
   font-size: 28px;
   line-height: 1;
-  letter-spacing: -0.42px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
-
-/* 💰 ÜRÜN KARTLARI FİYAT METNİ */
 .vegetable-section .product-card .price {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 500; /* Medium */
-  font-size: 14px;
-  line-height: 1.4286; /* 20px */
-  letter-spacing: 0%;
-  /* DÜZELTME: Marjinler sıfırlanır */
-  margin: 0;
-  color: rgba(20, 20, 20, 1); /* Koyu Gri/Siyah */
-  padding-top: 12px; /* REVIZYON 2 h3 margin bottom 12px yerine p'ye alt ve üstten 12px padding verildi */
+  font-weight: 500;
+  color: rgba(20, 20, 20, 1);
+  padding-top: 12px;
   padding-bottom: 12px;
 }
-
-/* 🖼️ ÜRÜN KARTLARI: BEYAZ KUTULAR */
 .vegetable-section .product-card {
   background-color: white;
   border-radius: 40px;
   padding: 32px 24px;
-  display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  margin: 0;
-
-  /* KRİTİK: YÜKSEKLİK VE KONUMLANDIRMA */
   position: relative;
   height: 384px;
   overflow: hidden;
 }
-
-/* 🖼️ ÜRÜN GÖRSELLERİ: KARTIN ALTINA HİZALAMA */
 .vegetable-section .product-image {
   width: 280px;
   height: 240px;
   display: block;
-
-  /* KRİTİK: Mutlak Konumlandırma */
   position: absolute;
-  bottom: 32px; /* Kartın altından 32px yukarıda */
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
-
-/* 📜 ÜRÜN LİSTESİ DÜZENİ */
 .vegetable-section .products-grid {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
   flex-direction: column;
-  gap: 20px; /* Kartlar arası 20px boşluk */
+  gap: 20px;
 }
-
-/*------------Mert Nukan reviews---------*/
-
-/* Reviews from our customers bolumu */
 #rewiew {
   background-color: #fbfbfb;
-  padding: 80px 20px;
 }
 .customer-reviews-section {
   background-color: white;
 }
 
-/*Baslik kismi Desktop formati */
 .reviews-header {
   background-color: white;
 }
-
 .reviews-header h2 {
   font-size: 48px;
-  font-weight: 600;
   line-height: 1.08;
   color: rgba(14, 14, 14, 14);
   font-family: "Inter Tight", sans-serif;
-  letter-spacing: 1.5;
-  text-transform: uppercase;
-  margin-left: 20px;
-  margin-right: 20px;
 }
-
 .reviews-header .h2baslik {
   color: #576f35;
 }
-
 .reviews-header p {
-  font-size: 14px;
   font-weight: 500;
-  line-height: 20px;
   color: rgba(14, 14, 14, 1);
   font-family: "Inter Tight", sans-serif;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
-
-/* Reviews kartlari bolumu */
-.customerreviews {
-  margin-top: 40px;
-  padding: 20px 16px;
-}
-
 .customerreviews li {
   list-style: none;
 }
-
 .customerreviews h3 {
   font-size: 18px;
-  font-weight: 600;
-  line-height: px;
+  line-height: 20px;
   color: rgba(14, 14, 14, 1);
   font-family: "Inter Tight", sans-serif;
   margin-top: 24px;
   margin-bottom: 8px;
-  text-transform: uppercase;
 }
-
 .customerreviews p {
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.4;
   color: #858585;
   font-family: "Inter Tight", sans-serif;
   text-align: center;
   margin-left: 7px;
   margin-right: 7px;
 }
-
 .customer1,
 .customer2,
 .customer3 {
   display: none;
 }
-
 .customercard,
 .customercard2,
 .customercard3 {
   border: 1px solid #d4bfc4;
   border-radius: 24px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 20px 16px;
 }
-
 .review-card {
-  /*Resimlerin ve cercevenin boyutlandirmasi*/
   width: 56px;
   height: 56px;
   border-radius: 50%;
   background-color: #e0e0e0;
 }
-
-/* Responsive Design Ayarlari */
 @media (max-width: 375px) {
   .customer1 {
     display: flex;
@@ -711,14 +496,12 @@ body {
     padding-left: 32px;
     padding-right: 32px;
   }
-
   .reviews-header h2 {
     font-size: 64px;
     margin-top: 100px;
     margin-left: 32px;
     margin-right: 183px;
   }
-
   .reviews-header p {
     font-size: 16px;
     margin-top: 24px;
@@ -726,7 +509,6 @@ body {
     margin-right: 183px;
   }
 }
-
 @media (min-width: 769px) {
   .customer1,
   .customer2,
@@ -756,30 +538,18 @@ body {
     margin-right: 627px;
   }
 }
-
-/******************************************Mert Nukan************************************************ *'/
-
-/* ************************************* Seher - advertisement *************************************** */
-
 .advertisement {
   width: 100%;
   background: #fbfbfb;
 }
 .advertisement .container {
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .advertisement-text {
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
   font-size: 48px;
   line-height: 52px;
-  letter-spacing: -1.5%;
-  text-transform: uppercase;
   vertical-align: middle;
   color: #141414;
 }
@@ -789,92 +559,61 @@ body {
   background: #576f35;
   color: #fbfbfb;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
   font-family: "Inter Tight", sans-serif;
-  font-weight: 600;
   font-size: 48px;
   line-height: 52px;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
   box-sizing: border-box;
 }
-/* ************************************* Seher bitti - advertisement *************************************** */
-
-/* ************************************* Seher - footer *************************************** */
 .footer-page {
   width: 100%;
   background: #7a3145;
   height: auto;
-  /* LOGO ÜST BOŞLUĞU */
   padding: 40px 20px;
 }
-
-/* LOGO SATIRI */
 .footer-logo-text {
-  display: flex;
-  align-items: center;
   margin-bottom: 20px;
 }
 address {
   font-style: normal;
 }
-/* PARAGRAF */
 .footer-logo-text + .text {
   font-family: "Inter Tight", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 500;
   color: #fbfbfb;
   max-width: 339px;
   margin-bottom: 40px;
 }
-/* MENU LINKS */
 .footer-list {
-  display: flex;
   flex-direction: column;
   gap: 14px;
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
-/* MENU (How it works, Vegetables...) */
 .footer-link a {
   font-size: 28px;
-  font-weight: 600;
   font-family: "Inter Tight", sans-serif;
   color: #ffffff;
   text-decoration: none;
-  text-transform: uppercase;
 }
-/* CONTACT INFO */
 address ul {
   padding: 0;
   margin: 0;
   margin-top: 40px;
   list-style: none;
-  display: flex;
   flex-direction: column;
   gap: 14px;
 }
 .address-link {
   font-family: "Inter Tight", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 500;
   color: #ffffff;
-  text-decoration: none;
   max-width: 180px;
 }
-/* POLICY SECTION */
 .footer-box-policy {
-  display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 80px;
 }
 .footer-policy-list {
-  display: flex;
   flex-direction: row;
   gap: 8px;
   padding: 0;
@@ -883,23 +622,14 @@ address ul {
 }
 .policy {
   font-family: "Inter Tight", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
   font-weight: 500;
   color: #d4bfc4;
   text-decoration: none;
 }
-header {
-  display: flex;
-  justify-content: space-between;
-}
 .logo {
-  display: flex;
   justify-content: center;
-  align-items: center;
   gap: 6px;
 }
-
 @media (min-width: 768px) {
   .container {
     width: 768px;
@@ -910,4 +640,26 @@ header {
     width: 1280px;
     margin: 0 auto;
   }
+}
+*/
+/*hasan*/
+.font-p {
+  font-size: 14px;
+  line-height: 1.4287;
+  letter-spacing: 0;
+}
+.padding-p {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.sec-pad {
+  padding: 80px 20px;
+}
+img {
+  display: block;
+}
+.same-tricks {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
 }
