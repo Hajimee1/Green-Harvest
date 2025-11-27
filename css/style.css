@@ -391,7 +391,7 @@ nav {
 .social-media {
   color: white;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.111;
   list-style: none;
   gap: 8px;
   flex-wrap: wrap;
@@ -452,7 +452,7 @@ nav {
 }
 .customerreviews h3 {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 1.111;
   color: rgba(14, 14, 14, 1);
   margin-top: 24px;
   margin-bottom: 8px;
