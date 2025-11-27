@@ -53,7 +53,21 @@ body {
   margin: 20px 0;
   position: relative;
 }
-
+.padding-p {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.sec-pad {
+  padding: 80px 20px;
+}
+img {
+  display: block;
+}
+.same-tricks {
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -245,6 +259,9 @@ nav {
   justify-items: center;
   font-size: 18px;
 }
+.box-menu-address {
+  flex-direction: column;
+}
 .inp::placeholder {
   color: black;
 }
@@ -336,8 +353,7 @@ nav {
   display: block;
   color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
 }
-
-.vegetable-section .veg-title-product {
+.veg-title-product {
   color: rgba(122, 49, 69, 1);
   font-size: 28px;
   line-height: 1;
@@ -429,10 +445,11 @@ nav {
 
   .customerreviews {
     display: flex;
+    flex: 1;
     gap: 24px;
     margin-top: 52px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .reviews-header h2 {
     font-size: 64px;
@@ -501,6 +518,9 @@ nav {
   max-width: 339px;
   margin-bottom: 40px;
 }
+.foot-info {
+  flex-direction: column;
+}
 .footer-list {
   flex-direction: column;
   gap: 14px;
@@ -541,9 +561,112 @@ address ul {
   justify-content: center;
   gap: 6px;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 768px;
+  }
+  body {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  .hero > h1 {
+    font-size: 76px;
+  }
+  .big-text {
+    font-size: 64px;
+    line-height: 1;
+  }
+  .sec-pad {
+    padding: 100px 32px;
+  }
+  .how-text {
+    width: 440px;
+    margin: 0 auto;
+  }
+  .step-item {
+    padding: 12px 24px 12px 15px;
+  }
+  .step-item > p {
+    padding: 0;
+  }
+  .products-grid {
+    max-width: 704px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px; /* figmadaki boşluk */
+    padding: 0;
+  }
+  .your-text {
+    width: 640px;
+  }
+  .form-text {
+    width: 640px;
+    padding: 72px 100px;
+    margin: 0 auto;
+  }
+  .soc-networks {
+    width: 640px;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 52px;
+  }
+  .inp {
+    width: 440px;
+    height: 52px;
+  }
+  .inputlar {
+    padding-top: 52px;
+    padding-bottom: 24px;
+  }
+  .yorum {
+    max-width: 440px;
+    height: 96px;
+  }
+  .buton {
+    padding: 16px 191px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .footer-logo-text {
+    margin-bottom: 24px;
+  }
+  .foot-info {
+    width: 265px;
+  }
+  .box-menu-address {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-page {
+    padding: 32px 32px;
+  }
+
+  .footer-box-policy {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    gap: 24px;
+  }
+  .address ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 64px;
+    list-style: none;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .mid-text {
+    font-size: 32px;
+    line-height: 1;
+  }
+  .veg-title-product,
+  .how-text > h2,
+  .Ordering,
+  .footer-list a {
+    font-size: 32px;
+    line-height: 1;
   }
 }
 @media (min-width: 1280px) {
@@ -551,20 +674,4 @@ address ul {
     width: 1280px;
     margin: 0 auto;
   }
-}
-/*hasan*/
-.padding-p {
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-.sec-pad {
-  padding: 80px 20px;
-}
-img {
-  display: block;
-}
-.same-tricks {
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
 }
