@@ -22,8 +22,8 @@
 
   <body>
     <div class="container">
-      <header class="header align-text flex">
-        <a href="#" class="logo align-text flex">
+      <header class="header align-item flex">
+        <a href="#" class="logo align-item flex">
           <svg width="16" height="16">
             <use href="./img/symbol-defs.svg#icon-logo"></use>
           </svg>
@@ -32,11 +32,11 @@
           </svg>
         </a>
         <nav class="">
-          <div class="mobile-menu align-text flex">
+          <div class="mobile-menu align-item flex">
             <svg class="close-i" width="32" height="32">
               <use href="./img/symbol-defs.svg#icon-Close"></use>
             </svg>
-            <div class="pages align-text flex">
+            <div class="pages align-item flex">
               <a href="#" class="nav-link">How It Works</a>
               <a href="#" class="nav-link">Vegetables</a>
               <a href="#" class="nav-link">Reviews</a>
@@ -77,7 +77,7 @@
             </p>
 
             <ul class="step-list flex">
-              <li class="step-item align-text flex">
+              <li class="step-item align-item flex">
                 <div class="ellipse flex">
                   <p>1</p>
                 </div>
@@ -88,14 +88,14 @@
                 </p>
               </li>
 
-              <li class="step-item">
+              <li class="step-item align-item flex">
                 <div class="ellipse flex">
                   <p>2</p>
                 </div>
                 <p class="font-p">Click on <span class="the-basket">the basket</span> and fill out the form.</p>
               </li>
 
-              <li class="step-item">
+              <li class="step-item align-item flex">
                 <div class="ellipse flex">
                   <p>3</p>
                 </div>
@@ -109,17 +109,15 @@
           </div>
         </section>
         <section class="advertisement sec-pad">
-          <div class="container flex">
-            <p class="advertisement-text same-tricks">
-              <span class="advertisement-color flex align-text">Discount up to 40%!</span> Taste the vitamins and keep
-              your health
-            </p>
-          </div>
+          <p class="advertisement-text big-text same-tricks">
+            <span class="advertisement-color white flex align-item">Discount up to 40%!</span> Taste the vitamins and
+            keep your health
+          </p>
         </section>
         <section class="vegetable-section flex sec-pad">
           <div class="veg-container">
             <div class="intro">
-              <h2 class="same-tricks">
+              <h2 class="big-text same-tricks">
                 ORGANIC <br />
                 <span class="veg-baslik">VEGETABLES</span>
               </h2>
@@ -134,13 +132,19 @@
               <li class="product-card">
                 <h3 class="veg-title-product same-tricks">EGGPLANT</h3>
                 <p class="price">60 USD / kg</p>
-                <img src="./img/eggplant_mobile.jpg" alt="Eggplant" class="product-image" />
+                <img
+                  width="280px"
+                  height="240px"
+                  src="./img/eggplant_mobile.jpg"
+                  alt="Eggplant"
+                  class="product-image"
+                />
               </li>
 
               <li class="product-card">
                 <h3 class="veg-title-product same-tricks">LEEK</h3>
                 <p class="price">50 USD / kg</p>
-                <img src="./img/desktop_mobile.jpg" alt="Leek" class="product-image" />
+                <img width="280px" height="240px" src="./img/desktop_mobile.jpg" alt="Leek" class="product-image" />
               </li>
 
               <li class="product-card">
@@ -172,7 +176,7 @@
         <section id="rewiew" class="sec-pad">
           <div class="customer-reviews-section">
             <div class="reviews-header">
-              <h2 class="same-tricks">reviews from our <span class="h2baslik">customers</span></h2>
+              <h2 class="big-text same-tricks">reviews from our <span class="h2baslik">customers</span></h2>
               <p class="font-p padding-p">
                 Words of our customers: impressions and opinions about the quality of our services and the freshness of
                 our products.<br />
@@ -182,7 +186,7 @@
             <div>
               <ul class="customerreviews">
                 <li class="customer1">
-                  <div class="customercard align-text flex">
+                  <div class="customercard align-item flex">
                     <img class="review-card" src="img/person1.jpg" alt="Review1" />
                     <h3 class="same-tricks">John Wax</h3>
                     <p class="font-p">
@@ -192,7 +196,7 @@
                   </div>
                 </li>
                 <li class="customer2">
-                  <div class="customercard2 align-text flex">
+                  <div class="customercard2 align-item flex">
                     <img class="review-card" src="img/person2.jpg" alt="Review2" />
                     <h3 class="same-tricks">Victoria Romashenko</h3>
                     <p class="font-p">
@@ -202,7 +206,7 @@
                   </div>
                 </li>
                 <li class="customer3">
-                  <div class="customercard3 align-text flex">
+                  <div class="customercard3 align-item flex">
                     <img class="review-card" src="img/person3.jpg" alt="Review3" />
                     <h3 class="same-tricks">Ihor Trachuk</h3>
                     <p class="font-p">
@@ -216,7 +220,7 @@
           </div>
         </section>
         <section class="your-order sec-pad">
-          <h2 class="Fresh-harvest same-tricks">
+          <h2 class="big-text same-tricks">
             <span>Fresh <span class="renk-1">harvest </span> Box has got you covered</span>
           </h2>
           <p class="our-bowes font-p padding-p">
@@ -224,7 +228,7 @@
             support local farmers . Order your box today and start enjoying the best that nature has to offer!
           </p>
 
-          <form class="form-text align-text flex" action="">
+          <form class="form-text align-item flex" action="">
             <h2 class="Ordering same-tricks">
               Ordering <span class="renk-2">from us</span> is quick and easy! Fill out
               <span class="renk-3">the form</span> below and we will contact you !
@@ -261,7 +265,7 @@
               <button class="buton same-tricks flex" type="submit" disabled id="submitBtn">SEND</button>
             </div>
           </form>
-          <div class="soc-networks align-text flex">
+          <div class="soc-networks align-item flex">
             <img
               class="limon"
               src="img/img9mobil.jpg"
@@ -292,7 +296,7 @@
 
       <footer class="footer-page">
         <div class="box-menu-address">
-          <div class="footer-logo-text flex align-text">
+          <div class="footer-logo-text flex align-item">
             <svg width="16" height="16">
               <use href="./img/symbol-defs.svg#icon-logo"></use>
             </svg>

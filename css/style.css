@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+  font-style: normal;
+  list-style-type: none;
 }
 :root {
   --black: #141414;
@@ -20,8 +25,12 @@ body {
   overflow-x: hidden;
 }
 body {
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Inter Tight", sans-serif;
   background-color: #576f35;
+  color: #fbfbfb;
+  font-size: 14px;
+  line-height: 1.4287;
+  letter-spacing: 0;
 }
 .container {
   width: 375px;
@@ -30,8 +39,12 @@ body {
 .flex {
   display: flex;
 }
-.align-text {
+.align-item {
   align-items: center;
+}
+.big-text {
+  font-size: 48px;
+  line-height: 1.0833;
 }
 /******************************************************************************************Cem Header **************************************************************************/
 
@@ -71,13 +84,8 @@ nav {
   gap: 24px;
 }
 .nav-link {
-  width: 100%;
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  color: #fbfbfb;
   border: 1px solid #fbfbfb;
   background-color: transparent;
-  text-decoration: none;
   padding: 12px 0px;
   border-radius: 12px;
 }
@@ -86,15 +94,10 @@ nav {
   padding: 16px 41px;
   background-color: #7a3145;
   border-radius: 30px;
-  color: #fbfbfb;
   border: none;
-  font-family: "Inter Tight", sans-serif;
   font-size: 18px;
 }
-.nav-link:active {
-  color: #7a3145;
-  background-color: #fbfbfb;
-}
+.nav-link:active,
 .nav-link:hover {
   color: #7a3145;
   background-color: #fbfbfb;
@@ -104,18 +107,13 @@ nav {
 }
 
 .hero-section h1 {
-  font-family: "Inter Tight", sans-serif;
   font-size: 52px;
   line-height: 1;
   color: var(--white);
 }
 
 .hero-section p {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: var(--white);
-  padding: 20px 0px 40px 0px;
-  margin: 0;
 }
 
 .hero img {
@@ -136,12 +134,10 @@ nav {
 
 .how_it_works_text {
   width: 100%;
-  height: auto;
   background-color: var(--green);
   flex-direction: column;
 }
 .how_it_works_text h2 {
-  font-family: "Inter Tight", sans-serif;
   font-size: 28px;
   line-height: 1;
   color: var(--white);
@@ -151,13 +147,9 @@ nav {
   color: var(--blush);
 }
 .how_it_works_text > p {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: var(--white);
 }
 .step-list {
-  text-decoration: none;
-  list-style: none;
   flex-direction: column;
   gap: 24px;
 }
@@ -179,7 +171,6 @@ nav {
 }
 
 .ellipse p {
-  font-family: "Inter Tight", sans-serif;
   margin: 0;
   position: absolute;
   top: 50%;
@@ -205,10 +196,7 @@ nav {
 }
 
 .step-item > p {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: var(--grey);
-  margin: 0;
   padding: 0 27px 0 0;
 }
 
@@ -243,14 +231,6 @@ nav {
   justify-content: center;
   padding: 40px 20px;
 }
-.Fresh-harvest {
-  color: #fbfbfb;
-  font-size: 48px;
-  line-height: 52px;
-}
-.our-bowes {
-  color: #fbfbfb;
-}
 .Ordering {
   text-align: start;
   color: #141414;
@@ -260,7 +240,6 @@ nav {
 }
 .buton {
   background-color: #7a3145;
-  color: #fbfbfb;
   border-radius: 30px;
   cursor: pointer;
   border: none;
@@ -338,14 +317,10 @@ nav {
 .follow-us {
   padding: 20px 0px 0px 0px;
   color: #d4bfc4;
-  vertical-align: middle;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
-  justify-content: center;
-  margin-right: 80px;
 }
 .limon {
-  align-items: center;
   border-radius: 15px;
 }
 .social-media {
@@ -356,37 +331,21 @@ nav {
   gap: 8px;
   flex-wrap: wrap;
 }
-.social {
-  color: #fbfbfb;
-  text-decoration: none;
-}
+
 .vegetable-section {
   background-color: rgba(122, 49, 69, 1);
-}
-.vegetable-section .intro h2 {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 48px;
-  line-height: 1.0833;
-  color: #fbfbfb;
 }
 .vegetable-section .intro .veg-baslik {
   display: block;
   color: rgba(212, 191, 196, 1); /* Açık mor/pembe */
 }
-.vegetable-section .intro p {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  color: #fbfbfb;
-}
+
 .vegetable-section .veg-title-product {
   color: rgba(122, 49, 69, 1);
-  font-family: "Inter Tight", sans-serif;
   font-size: 28px;
   line-height: 1;
 }
 .vegetable-section .product-card .price {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: rgba(20, 20, 20, 1);
   padding-top: 12px;
   padding-bottom: 12px;
@@ -396,22 +355,13 @@ nav {
   border-radius: 40px;
   padding: 32px 24px;
   flex-direction: column;
-  position: relative;
-  height: 384px;
-  overflow: hidden;
 }
 .vegetable-section .product-image {
   width: 280px;
   height: 240px;
-  display: block;
-  position: absolute;
-  bottom: 32px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  margin: 0 auto;
 }
 .vegetable-section .products-grid {
-  list-style: none;
   flex-direction: column;
   gap: 20px;
 }
@@ -426,18 +376,13 @@ nav {
   background-color: white;
 }
 .reviews-header h2 {
-  font-size: 48px;
-  line-height: 1.08;
   color: rgba(14, 14, 14, 14);
-  font-family: "Inter Tight", sans-serif;
 }
 .reviews-header .h2baslik {
   color: #576f35;
 }
 .reviews-header p {
-  font-weight: 500;
   color: rgba(14, 14, 14, 1);
-  font-family: "Inter Tight", sans-serif;
 }
 .customerreviews li {
   list-style: none;
@@ -446,17 +391,13 @@ nav {
   font-size: 18px;
   line-height: 20px;
   color: rgba(14, 14, 14, 1);
-  font-family: "Inter Tight", sans-serif;
   margin-top: 24px;
   margin-bottom: 8px;
 }
 .customerreviews p {
-  font-weight: 500;
   color: #858585;
-  font-family: "Inter Tight", sans-serif;
   text-align: center;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin: 0 7px;
 }
 .customer1,
 .customer2,
@@ -539,47 +480,27 @@ nav {
   }
 }
 .advertisement {
-  width: 100%;
-  background: #fbfbfb;
+  background-color: #fbfbfb;
 }
-.advertisement .container {
-  flex-direction: column;
-  gap: 10px;
+.advertisement .white {
+  color: #fbfbfb;
 }
 .advertisement-text {
-  font-family: "Inter Tight", sans-serif;
-  font-size: 48px;
-  line-height: 52px;
   vertical-align: middle;
   color: #141414;
 }
 .advertisement-color {
-  width: 335px;
-  height: 102px;
   background: #576f35;
-  color: #fbfbfb;
   border-radius: 12px;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 48px;
-  line-height: 52px;
-  box-sizing: border-box;
 }
 .footer-page {
-  width: 100%;
   background: #7a3145;
-  height: auto;
   padding: 40px 20px;
 }
 .footer-logo-text {
   margin-bottom: 20px;
 }
-address {
-  font-style: normal;
-}
 .footer-logo-text + .text {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
-  color: #fbfbfb;
   max-width: 339px;
   margin-bottom: 40px;
 }
@@ -590,9 +511,7 @@ address {
 }
 .footer-link a {
   font-size: 28px;
-  font-family: "Inter Tight", sans-serif;
   color: #ffffff;
-  text-decoration: none;
 }
 address ul {
   padding: 0;
@@ -603,8 +522,6 @@ address ul {
   gap: 14px;
 }
 .address-link {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: #ffffff;
   max-width: 180px;
 }
@@ -621,10 +538,7 @@ address ul {
   list-style: none;
 }
 .policy {
-  font-family: "Inter Tight", sans-serif;
-  font-weight: 500;
   color: #d4bfc4;
-  text-decoration: none;
 }
 .logo {
   justify-content: center;
@@ -641,13 +555,7 @@ address ul {
     margin: 0 auto;
   }
 }
-*/
 /*hasan*/
-.font-p {
-  font-size: 14px;
-  line-height: 1.4287;
-  letter-spacing: 0;
-}
 .padding-p {
   padding-top: 20px;
   padding-bottom: 40px;
