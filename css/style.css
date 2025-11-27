@@ -9,6 +9,57 @@
   font-style: normal;
   list-style-type: none;
 }
+/*img'ler*/
+.logo-svg {
+  width: 16px;
+  height: 16px;
+}
+.text-svg {
+  width: 146px;
+  height: 12px;
+}
+.hero-img1 {
+  background-image: url("../img/image1mobil.jpg");
+  width: 375px;
+  height: 372px;
+}
+.hero-img2 {
+  background: transparent;
+  background-image: url(../img/image2mobil.jpg);
+  width: 335px;
+  height: 452px;
+  border-radius: 31px;
+  overflow: hidden;
+}
+.product-img {
+  width: 280px;
+  height: 240px;
+}
+.eggplant {
+  background-image: url(../img/eggplant_mobile.jpg);
+}
+.leek {
+  background-image: url(../img/leek_mobile.jpg);
+}
+.mushroom {
+  background-image: url(../img/mushroom_mobile.jpg);
+}
+.corn {
+  background-image: url(../img/corn_mobile.jpg);
+}
+.potato {
+  background-image: url(../img/potato_mobile.jpg);
+}
+.carrot {
+  background-image: url(../img/carrot_mobile.jpg);
+}
+.img-9 {
+  width: 295px;
+  height: 272px;
+  background-image: url(../img/img9mobil.jpg);
+  border-radius: 15px;
+}
+/* */
 :root {
   --black: #141414;
   --white: #fbfbfb;
@@ -135,7 +186,7 @@ nav {
 }
 
 .how_it_works_image {
-  background-color: var(--chianti);
+  background-color: #7a3145;
   padding: 40px 20px;
 }
 
@@ -384,7 +435,6 @@ nav {
 .customer-reviews-section {
   background-color: white;
 }
-
 .reviews-header {
   background-color: white;
 }
@@ -415,11 +465,13 @@ nav {
 .customer1,
 .customer2,
 .customer3 {
+  flex: 1;
   display: none;
 }
 .customercard,
 .customercard2,
 .customercard3 {
+  flex: 1;
   border: 1px solid #d4bfc4;
   border-radius: 24px;
   flex-direction: column;
@@ -445,9 +497,7 @@ nav {
 
   .customerreviews {
     display: flex;
-    flex: 1;
     gap: 24px;
-    margin-top: 52px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -455,19 +505,19 @@ nav {
     font-size: 64px;
     margin-top: 100px;
     margin-left: 32px;
-    margin-right: 183px;
+    margin-right: 153px;
   }
   .reviews-header p {
     font-size: 16px;
-    margin-top: 24px;
     margin-left: 32px;
-    margin-right: 183px;
+    margin-right: 151px;
   }
 }
 @media (min-width: 769px) {
   .customer1,
   .customer2,
   .customer3 {
+    flex: 1;
     display: flex;
   }
 
@@ -477,13 +527,6 @@ nav {
     margin-top: 52px;
     padding-left: 100px;
     padding-right: 100px;
-  }
-
-  .reviews-header h2 {
-    font-size: 64px;
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 627px;
   }
 
   .reviews-header p {
@@ -559,10 +602,74 @@ address ul {
 }
 .logo {
   justify-content: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 @media (min-width: 768px) {
+  .logo-svg {
+    width: 20px;
+    height: 20px;
+  }
+  .text-svg {
+    width: 186.67px;
+    height: 16.67px;
+  }
+  .step-item:nth-child(2) {
+    padding: 12px 24px 12px 15px;
+  }
+  .step-list .step-item:nth-child(2) > p {
+    padding: 6px 45px 6px 0px;
+  }
+  .how_it_works_image {
+    background-color: var(--chianti);
+    padding: 100px 20px;
+  }
+  .padding-p {
+    padding: 24px 0 52px 0;
+  }
+  .hero-img1 {
+    background-image: url(../img/img1tab.jpg);
+    width: 768px;
+    height: 536px;
+  }
+  .hero-img2 {
+    background-image: url(../img/img2tab.jpg);
+    width: 640px;
+    height: 640px;
+    border-radius: 30px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  .product-img {
+    width: 280px;
+    height: 240px;
+  }
+  .eggplant {
+    background-image: url(../img/eggplant_tablet.jpg);
+  }
+  .leek {
+    background-image: url(../img/leek_tablet.jpg);
+  }
+  .mushroom {
+    background-image: url(../img/mushroom_tablet.jpg);
+  }
+  .corn {
+    background-image: url(../img/corn_tablet.jpg);
+  }
+  .potato {
+    background-image: url(../img/potato_tablet.jpg);
+  }
+  .carrot {
+    background-image: url(../img/carrot_tablet.jpg);
+  }
+  .img-9 {
+    width: 536px;
+    height: 316px;
+    background-image: url(../img/img9tab.jpg);
+    border-radius: 15px;
+  }
+  /* */
   .container {
     width: 768px;
   }
@@ -611,6 +718,7 @@ address ul {
     margin: 0 auto;
     margin-top: 32px;
     padding: 52px;
+    align-items: start;
   }
   .inp {
     width: 440px;
