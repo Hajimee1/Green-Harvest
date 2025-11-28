@@ -776,16 +776,12 @@ address ul {
 /*Desktop Responsive - Ayşe*/
 @media screen and (min-width: 1280px) {
   .container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 1280px;
+    margin: 0 auto;
   }
   .header {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 1280px;
     background-color: transparent;
     z-index: 10;
     padding: 32px 100px;
@@ -797,10 +793,10 @@ address ul {
   }
   .header > svg,
   .close-i {
-    display: none !important;
+    display: none;
   }
   nav {
-    display: block !important;
+    display: flex;
   }
   .hero-section {
     display: flex;
@@ -846,6 +842,7 @@ address ul {
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-image: url(../img/img1desktop.jpg);
   }
   .hero-section img {
     width: 50%;
@@ -856,6 +853,7 @@ address ul {
     position: relative;
   }
   .mobile-menu {
+    display: flex;
     position: static;
     width: auto;
     height: auto;
@@ -865,6 +863,8 @@ address ul {
     gap: 20px;
     padding: 0;
     transform: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
   }
   .pages {
     flex-direction: row;
@@ -880,6 +880,16 @@ address ul {
   .pages .nav-link:nth-child(3) {
     width: 83px;
   }
+  .nav-link:hover {
+    background-color: #d4bfc4;
+    border-color: #d4bfc4;
+    color: #7a3145;
+  }
+  .nav-link:active {
+    background-color: #fbfbfb;
+    border-color: #fbfbfb;
+    color: #7a3145;
+  }
   .shop-btn {
     display: flex;
     justify-content: center;
@@ -894,6 +904,15 @@ address ul {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 0;
+    transition: all 0.3s ease;
+  }
+  .shop-btn:hover {
+    background-color: #d4bfc4;
+    color: #7a3145;
+  }
+  .shop-btn:active {
+    background-color: #fbfbfb;
+    color: #7a3145;
   }
   .how_it_works {
     display: flex;
@@ -931,7 +950,6 @@ address ul {
     line-height: 100%;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-    margin-bottom: 24px;
     max-width: 500px;
     text-shadow: 0px 4px 24px rgba(20, 20, 20, 0.2);
   }
@@ -940,7 +958,7 @@ address ul {
     font-size: 16px;
     line-height: 125%;
     margin-top: 0;
-    margin-bottom: 104px;
+    margin-bottom: 52px;
     max-width: 500px;
     text-align: left;
   }
@@ -1023,8 +1041,11 @@ address ul {
     padding: 100px;
     box-sizing: border-box;
   }
+  .veg-container {
+    width: 100%;
+    max-width: 100%;
+  }
   .intro {
-    margin-bottom: 52px;
     max-width: 800px;
   }
   .vegetable-section .intro h2 {
@@ -1048,6 +1069,9 @@ address ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 0;
   }
   .vegetable-section .product-card {
     border-radius: 40px;
@@ -1194,8 +1218,16 @@ address ul {
     padding: 0 24px;
     font-size: 16px;
     box-sizing: border-box;
+    color: #141414;
   }
-  .yorum {
+  .inp:hover,
+  .inp:focus {
+    border-color: #7a3145;
+  }
+  .inp:not(:placeholder-shown):invalid {
+    border-color: #e74a3b;
+  }
+  .inp:not(:placeholder-shown) .yorum {
     width: 100%;
     height: 120px;
     border-radius: 20px;
@@ -1273,7 +1305,7 @@ address ul {
   }
   .text-svg {
     height: 18px;
-    width: auto;
+    margin-left: 9px;
   }
   .foot-info .text {
     font-size: 16px;
